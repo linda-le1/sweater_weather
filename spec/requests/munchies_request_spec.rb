@@ -13,7 +13,6 @@ RSpec.describe "Munchie Endpoint" do
     expect(response).to be_successful
 
     destination_info = JSON.parse(response.body)['data']
-    byebug
 
     expect(destination_info).to have_key('id')
     expect(destination_info['id']).to eq(nil)
@@ -23,6 +22,7 @@ RSpec.describe "Munchie Endpoint" do
     expect(destination_info['attributes']).to have_key('travel_time')
     expect(destination_info['attributes']).to have_key('forecast')
     expect(destination_info['attributes']).to have_key('restaurant')
+
 
     expect(destination_info['attributes']['restaurant']).to have_key('name')
     expect(destination_info['attributes']['restaurant']).to have_key('address')
