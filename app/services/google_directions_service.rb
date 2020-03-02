@@ -15,14 +15,9 @@ class GoogleDirectionsService
         results['routes'][0]['legs'][0]['duration']['text']
     end
 
-    def get_latitude
+    def get_coordinates
         results = self.get_directions
-        results['routes'][0]['legs'][0]['end_location']['lat']
-    end
-
-    def get_longitude
-        results = self.get_directions
-        results['routes'][0]['legs'][0]['end_location']['lng']
+        results['routes'][0]['legs'][0]['end_location']
     end
 
     def get_end_location

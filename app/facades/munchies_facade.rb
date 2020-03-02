@@ -25,16 +25,20 @@ class MunchiesFacade
         (Time.now + total_hours.hour + total_minutes.minutes).to_i
     end
 
+    def coordinates
+        start_google_service(@start, @destination).get_coordinates
+    end
+
     def forecast
         time = self.calculate_time
-        latitude = start_google_service(@start, @destination).get_latitude
-        longitude = start_google_service(@start, @destination).get_longitude
+        latitude = self.coordinates['lat']
+        longitude = self.coordinates['lng']
         start_weather_service(@destination).get_future_weather(latitude, longitude, time)
     end
 
     def restaurant
-        latitude = start_google_service(@start, @destination).get_latitude
-        longitude = start_google_service(@start, @destination).get_longitude
+        latitude = self.coordinates['lat']
+        longitude = self.coordinates['lng']
         restaurant_info = start_yelp_service(latitude, longitude, @cuisine).get_munchies
         Restaurant.new(restaurant_info)
     end
