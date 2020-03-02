@@ -8,7 +8,7 @@ RSpec.describe "Munchie Endpoint" do
     destination = 'pueblo,co'
     cuisine = 'chinese'
 
-    visit "/api/v1/munchies?start=#{start}&end=#{destination}&food=#{cuisine}"
+    get "/api/v1/munchies?start=#{start}&end=#{destination}&food=#{cuisine}"
 
     expect(response).to be_successful
 
