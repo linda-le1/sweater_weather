@@ -12,8 +12,21 @@ class WeatherService
     end
 
     def get_future_weather(latitude, longitude, time)
-        weather_forecast = Faraday.get("https://api.darksky.net/forecast/#{ENV['DARKSKY_API']}/#{latitude},#{longitude},#{time}")
-        weather_response = JSON.parse(weather_forecast.body)['currently']['summary']
+        weather_forecast = retrieve_data("#{ENV['DARKSKY_API']}/#{latitude},#{longitude},#{time}")
+        weather_forecast['currently']['summary']
+    end
+
+    private
+
+    def make_connection
+        Faraday.new(url: 'https://api.darksky.net/forecast/') do |f|
+            f.adapter Faraday.default_adapter
+        end
+    end
+
+    def retrieve_data(url)
+        @response ||= make_connection.get(url)
+        JSON.parse(@response.body)
     end
 end
 

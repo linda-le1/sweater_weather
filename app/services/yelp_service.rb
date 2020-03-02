@@ -9,7 +9,7 @@ class YelpService
     end
 
     def get_munchies
-        retrieve_data("v3/businesses/search")
+        retrieve_data('v3/businesses/search')
     end
 
     private
