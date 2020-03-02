@@ -1,4 +1,5 @@
 class GoogleDirectionsService
+    attr_reader :start, :destination
 
     def initialize(start, destination)
         @start = start
@@ -8,8 +9,6 @@ class GoogleDirectionsService
     def get_directions
         google_api_response = Faraday.get("https://maps.googleapis.com/maps/api/directions/json?origin=#{@start}&destination=#{@destination}&key=#{ENV['GEOCODE_API']}")
         google_response = JSON.parse(google_api_response.body)
-        # time = google_response['routes'][0]['legs'][0]['duration']
-        # time = (Time.now + 1.hour + 48.minutes).to_i
     end
 
     def get_trip_duration
