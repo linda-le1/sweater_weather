@@ -12,7 +12,7 @@ RSpec.describe "Munchie Endpoint" do
 
     expect(response).to be_successful
 
-    destination_info = JSON.parse(response.body)['data']['attributes']
+    destination_info = JSON.parse(response.body)
     byebug
 
     expect(destination_info).to have_key('end_location')

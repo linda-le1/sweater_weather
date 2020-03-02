@@ -1,11 +1,11 @@
 class MunchiesFacade
 
-    attr_reader :id, :start, :destination
+    attr_reader :start, :destination, :id
 
     def initialize(start, destination, cuisine)
         @id = nil
-        @start = start
-        @destination = destination
+        @start = start.gsub(",", "+")
+        @destination = destination.gsub(",", "+")
         @cuisine = cuisine
     end
 
@@ -33,6 +33,9 @@ class MunchiesFacade
     end
 
     def restaurant
+        latitude = start_google_service(@start, @destination).get_latitude
+        longitude = start_google_service(@start, @destination).get_longitude
+
     end
 
     def start_google_service(start, destination)
@@ -41,5 +44,9 @@ class MunchiesFacade
 
     def start_weather_service(destination)
         WeatherService.new(@destination)
+    end
+
+    def start_yelp_service(latitude, longitude, cuisine)
+        YelpService.new(@latitude, @longitude, @cuisine)
     end
 end
