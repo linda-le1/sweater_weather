@@ -1,10 +1,12 @@
 require 'rails_helper'
 
-describe 'Weather' do
+describe 'Weather Forecast' do
     it 'can return weather forecast based on location' do
         WebMock.allow_net_connect!
 
-        get '/api/v1/forecast?location=denver,co'
+        location = 'denver,co'
+
+        get "/api/v1/forecast?location=#{location}"
 
         expect(response).to be_successful
         weather_forecast = JSON.parse(response.body)['data']['attributes']
