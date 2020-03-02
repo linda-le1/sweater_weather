@@ -35,7 +35,8 @@ class MunchiesFacade
     def restaurant
         latitude = start_google_service(@start, @destination).get_latitude
         longitude = start_google_service(@start, @destination).get_longitude
-
+        restaurant_info = start_yelp_service(latitude, longitude, @cuisine).get_munchies
+        Restaurant.new(restaurant_info)
     end
 
     def start_google_service(start, destination)
@@ -47,6 +48,7 @@ class MunchiesFacade
     end
 
     def start_yelp_service(latitude, longitude, cuisine)
-        YelpService.new(@latitude, @longitude, @cuisine)
+        time = self.calculate_time
+        YelpService.new(latitude, longitude, @cuisine, time)
     end
 end
