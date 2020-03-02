@@ -5,6 +5,7 @@ class Api::V1::MunchiesController < ApplicationController
         destination = params['end'].gsub(",", "+")
         cuisine = params['food']
         munchies_results = MunchiesFacade.new(start, destination, cuisine)
+        render json: MunchiesSerializer.new(munchies_results)
 
         # google_api_response = Faraday.get("https://maps.googleapis.com/maps/api/directions/json?origin=#{start}&destination=#{destination}&key=#{ENV['GEOCODE_API']}")
         # google_response = JSON.parse(google_api_response.body)

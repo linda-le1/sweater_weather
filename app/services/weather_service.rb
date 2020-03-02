@@ -11,11 +11,9 @@ class WeatherService
         JSON.parse(weather_response.body)
     end
 
-    def get_future_weather
-        response = Faraday.get("https://maps.googleapis.com/maps/api/geocode/json?address=#{@location}&key=#{ENV['GEOCODE_API']}")
-        parsed_location = JSON.parse(response.body)['results']
-        location = Location.new(parsed_location)
+    def get_future_weather(latitude, longitude, time)
         weather_forecast = Faraday.get("https://api.darksky.net/forecast/#{ENV['DARKSKY_API']}/#{latitude},#{longitude},#{time}")
         weather_response = JSON.parse(weather_forecast.body)['currently']['summary']
+    end
 end
 
