@@ -5,6 +5,8 @@ ruby '2.5.1'
 
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'fast_jsonapi'
+gem 'faraday'
+gem 'figaro'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 4.1'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
@@ -15,10 +17,12 @@ group :development, :test do
   gem 'capybara'
   gem 'factory_bot_rails'
   gem 'launchy'
+  gem 'nyan-cat-formatter'
   gem 'rspec-rails'
   gem 'simplecov'
   gem 'shoulda-matchers'
-  gem 'nyan-cat-formatter'
+  gem 'vcr'
+  gem 'webmock'
 end
 
 group :development do

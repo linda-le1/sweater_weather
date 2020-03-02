@@ -71,4 +71,13 @@ RSpec.configure do |config|
   end
 
   config.default_formatter = 'NyanCatFormatter'
+
+  VCR.configure do |config|
+    config.cassette_library_dir = "spec/fixtures/vcr_cassettes"
+    config.filter_sensitive_data('<DARKSKY_API>') { ENV['DARKSKY_API'] }
+    config.filter_sensitive_data('<GEOCODE_API>') { ENV['GEOCODE_API'] }
+    config.filter_sensitive_data('<SHUTTERSTOCK_KEY>') { ENV['SHUTTERSTOCK_KEY'] }
+    config.filter_sensitive_data('<SHUTTERSTOCK_SECRET>') { ENV['SHUTTERSTOCK_SECRET'] }
+    config.configure_rspec_metadata!
+    end
 end
