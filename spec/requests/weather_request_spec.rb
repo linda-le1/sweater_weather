@@ -36,7 +36,7 @@ describe 'Weather Forecast' do
         expect(daily_forecast).to have_key('humidity')
 
         expect(hourly_forecast.count).to eq(8)
-        expect(hourly_forecast).to have_key('time')
-        expect(hourly_forecast).to have_key('temperature')
+        expect(hourly_forecast[0]).to have_key('time')
+        expect(hourly_forecast[0]).to have_key('temperature')
     end
 end

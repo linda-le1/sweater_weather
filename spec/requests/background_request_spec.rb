@@ -10,3 +10,4 @@ RSpec.describe "Background Image" do
     # expect(response).to be_successful
     # background = JSON.parse(response.body)
   end
+end

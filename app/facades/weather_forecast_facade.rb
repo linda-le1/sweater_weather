@@ -20,9 +20,10 @@ class WeatherForecastFacade
 
     def hourly_forecast_results
         hourly_weather_collection = []
-        self.forecast_results['hourly']['data'].first(8).flat_map do |info|
+        self.forecast_results['hourly']['data'].flat_map do |info|
             hourly_weather_collection << HourlyWeatherForecast.new(info)
         end
+        hourly_weather_collection.first(8)
     end
 
     def current_weather_results
