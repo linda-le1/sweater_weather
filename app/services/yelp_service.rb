@@ -9,9 +9,24 @@ class YelpService
     end
 
     def get_munchies
-        yelp_response = Faraday.get("https://api.yelp.com/v3/businesses/search?latitude=#{@latitude}&longitude=#{@longitude}&open_at=#{@time}&categories=#{@cuisine}")do |f|
-                        f.headers['Authorization'] = "Bearer #{ENV['YELP_API']}"
-                        end
-        JSON.parse(yelp_response.body)
+        retrieve_data("v3/businesses/search")
+    end
+
+    private
+
+    def make_connection
+        Faraday.new(url: 'https://api.yelp.com/') do |f|
+            f.headers['Authorization'] = "Bearer #{ENV['YELP_API']}"
+            f.params['latitude'] = "#{@latitude}"
+            f.params['longitude'] = "#{@longitude}"
+            f.params['categories'] = "#{@cuisine}"
+            f.params['open_at'] ="#{@time}"
+            f.adapter Faraday.default_adapter
+        end
+    end
+
+    def retrieve_data(url)
+        response = make_connection.get(url)
+        JSON.parse(response.body)
     end
 end
