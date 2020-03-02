@@ -26,7 +26,7 @@ class YelpService
     end
 
     def retrieve_data(url)
-        response = make_connection.get(url)
-        JSON.parse(response.body)
+        @response ||= make_connection.get(url)
+        JSON.parse(@response.body)
     end
 end
