@@ -1,4 +1,4 @@
-class MunchiesService
+class YelpService
 
     attr_reader :latitude, :longitude, :cuisine
     def initialize(latitude, longitude, cuisine, time)
