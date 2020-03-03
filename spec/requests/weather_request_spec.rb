@@ -12,6 +12,7 @@ describe 'Weather Forecast' do
         weather_forecast = JSON.parse(response.body)['data']['attributes']
 
         expect(weather_forecast).to have_key('current_weather_results')
+        expect(weather_forecast).to have_key('location_results')
         expect(weather_forecast).to have_key('hourly_forecast_results')
         expect(weather_forecast).to have_key('daily_forecast_results')
         expect(weather_forecast).to have_key('current_evening_summary')
@@ -19,6 +20,11 @@ describe 'Weather Forecast' do
         current_forecast = weather_forecast['current_weather_results']
         daily_forecast = weather_forecast['daily_forecast_results'][0]
         hourly_forecast = weather_forecast['hourly_forecast_results']
+        location_results = weather_forecast['location_results']
+
+        expect(location_results).to have_key('city')
+        expect(location_results).to have_key('state')
+        expect(location_results).to have_key('country')
 
         expect(current_forecast).to have_key('time')
         expect(current_forecast).to have_key('summary')
