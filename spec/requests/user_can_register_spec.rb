@@ -8,7 +8,7 @@ RSpec.describe 'Users' do
                       password_confirmation: "password"
                     }
 
-        post '/api/v1/users'
+        post '/api/v1/users', params: params
 
         expect(response.status).to eq(201)
 
