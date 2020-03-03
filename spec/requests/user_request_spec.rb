@@ -9,7 +9,7 @@ RSpec.describe 'Users' do
                     }
 
         post '/api/v1/users', params: params
-
+                    
         expect(response.status).to eq(201)
 
         user_info = JSON.parse(response.body)
@@ -26,14 +26,14 @@ RSpec.describe 'Users' do
                   password_confirmation: "password"
                 }
 
-    post '/api/v1/users', params: params
+      post '/api/v1/users', params: params
 
-    expect(response.status).to eq(400)
+      expect(response.status).to eq(400)
 
-    user_info = JSON.parse(response.body)
+      user_info = JSON.parse(response.body)
 
-    expect(user_info).to have_key("error")
-    expect(user_info['error']).to eql('Email has already been taken')
+      expect(user_info).to have_key("error")
+      expect(user_info['error']).to eql('Email has already been taken')
   end
 
   it 'can return a 400 response if user did not enter password' do
