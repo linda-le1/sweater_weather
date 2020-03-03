@@ -13,7 +13,7 @@ RSpec.describe 'Road Trips' do
                 "api_key": "12345wootwoot"
                     }
 
-            post "/api/v1/road_trip", params: params
+            post "/api/v1/roadtrip", params: params
 
             trip_data = JSON.parse(response.body)
 
