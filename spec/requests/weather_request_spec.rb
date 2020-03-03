@@ -12,8 +12,9 @@ describe 'Weather Forecast' do
         weather_forecast = JSON.parse(response.body)['data']['attributes']
 
         expect(weather_forecast).to have_key('current_weather_results')
-        expect(weather_forecast).to have_key('daily_forecast_results')
         expect(weather_forecast).to have_key('hourly_forecast_results')
+        expect(weather_forecast).to have_key('daily_forecast_results')
+        expect(weather_forecast).to have_key('current_evening_summary')
 
         current_forecast = weather_forecast['current_weather_results']
         daily_forecast = weather_forecast['daily_forecast_results'][0]
