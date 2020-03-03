@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     namespace :v1 do
         get '/forecast', to: 'weather#index'
         get '/backgrounds', to: 'backgrounds#index'
+        post '/api/v1/users', to : 'users#create'
       end
     end
 end
