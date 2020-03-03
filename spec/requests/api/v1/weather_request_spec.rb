@@ -1,10 +1,10 @@
 require 'rails_helper'
 
 describe 'Weather Forecast' do
-    it 'can return weather forecast based on location' do
-        WebMock.allow_net_connect!
-
+    it 'can return weather forecast based on location', :vcr do
         location = 'denver,co'
+
+        allow(Time).to receive(:now).and_return(Time.parse('2020-03-02 12:00:00 -0700'))
 
         get "/api/v1/forecast?location=#{location}"
 

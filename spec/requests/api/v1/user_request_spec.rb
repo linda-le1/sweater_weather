@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Users' do
-    it 'can create a new user and generate an api key' do
+    it 'can create a new user and generate an api key', :vcr do
           params = {
                       email: "whatever@example.com",
                       password: "password",
@@ -9,7 +9,7 @@ RSpec.describe 'Users' do
                     }
 
         post '/api/v1/users', params: params
-                    
+
         expect(response.status).to eq(201)
 
         user_info = JSON.parse(response.body)

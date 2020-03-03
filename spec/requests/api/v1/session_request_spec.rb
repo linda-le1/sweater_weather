@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Sessions' do
-    it 'can login with valid credentials and their api key is returned' do
+    it 'can login with valid credentials and their api key is returned', :vcr do
         User.create(email: 'whatever@example.com', password: 'password', password_confirmation: 'password')
 
             params = {
