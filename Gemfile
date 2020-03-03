@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.1'
 
+gem 'bcrypt'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'fast_jsonapi'
 gem 'faraday'
