@@ -5,9 +5,10 @@ RSpec.describe "Background Image" do
     WebMock.allow_net_connect!
 
     location = 'denver,co'
-    # get "/api/v1/backgrounds?location=#{location}"
+    get "/api/v1/backgrounds?location=#{location}"
 
-    # expect(response).to be_successful
-    # background = JSON.parse(response.body)
+    expect(response).to be_successful
+    background = JSON.parse(response.body)
+    expect(background).to have_key('url')
   end
 end
