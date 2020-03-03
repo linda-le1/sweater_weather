@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Users' do
-    it 'can create a new user and generate an api key' do
+    it 'can create a new user and generate an api key', :vcr do
           params = {
                       email: "whatever@example.com",
                       password: "password",
@@ -26,14 +26,14 @@ RSpec.describe 'Users' do
                   password_confirmation: "password"
                 }
 
-    post '/api/v1/users', params: params
+      post '/api/v1/users', params: params
 
-    expect(response.status).to eq(400)
+      expect(response.status).to eq(400)
 
-    user_info = JSON.parse(response.body)
+      user_info = JSON.parse(response.body)
 
-    expect(user_info).to have_key("error")
-    expect(user_info['error']).to eql('Email has already been taken')
+      expect(user_info).to have_key("error")
+      expect(user_info['error']).to eql('Email has already been taken')
   end
 
   it 'can return a 400 response if user did not enter password' do
