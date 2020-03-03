@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe "Background Image" do
-  it 'can return background image based on location' do
+  it 'can return background image based on location' do, :vcr;
     WebMock.allow_net_connect!
 
     location = 'denver,co'
