@@ -9,6 +9,9 @@ RSpec.describe "Background Image" do
 
     expect(response).to be_successful
     background = JSON.parse(response.body)
-    expect(background).to have_key('url')
+
+    expect(background['data']).to have_key('id')
+    expect(background['data']['id']).to eq(nil)
+    expect(background['data']['attributes']).to have_key('url')
   end
 end
