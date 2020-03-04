@@ -15,7 +15,7 @@ describe 'Weather Forecast' do
         expect(weather_forecast).to have_key('location_results')
         expect(weather_forecast).to have_key('hourly_forecast_results')
         expect(weather_forecast).to have_key('daily_forecast_results')
-        expect(weather_forecast).to have_key('current_evening_summary')
+        expect(weather_forecast).to have_key('current_evening_results')
 
         current_forecast = weather_forecast['current_weather_results']
         daily_forecast = weather_forecast['daily_forecast_results'][0]

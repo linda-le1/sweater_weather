@@ -33,7 +33,7 @@ class WeatherForecast
         CurrentWeatherForecast.new(forecast_results, location_results.timezone)
     end
 
-    def current_evening_summary
+    def current_evening_results
         all_hourly_results.collect do |result|
             return result.summary if result.time.hour == 21
             end

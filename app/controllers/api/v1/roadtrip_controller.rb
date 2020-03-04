@@ -7,7 +7,7 @@ class Api::V1::RoadtripController < ApplicationController
             render json: RoadtripSerializer.new(roadtrip)
         else
             render json: {
-                error: "Something went wrong. Please try again.",
+                error: 'Something went wrong. Please try again.',
                 status: 400
                             },
                 status: :bad_request
