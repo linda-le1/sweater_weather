@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe HourlyWeatherForecast do
+RSpec.describe WeeklyWeatherForecast do
     it 'exists and has certain attributes' do
         WebMock.allow_net_connect!
         allow(Time).to receive(:now).and_return(Time.parse('2020-03-03 12:00:00 -0700'))
