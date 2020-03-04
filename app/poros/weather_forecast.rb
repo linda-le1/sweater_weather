@@ -7,7 +7,7 @@ class WeatherForecast
     end
 
     def forecast_results
-        weather_service(location_results.latitude, location_results.longitude).get_json_weather
+        @weather_service ||= weather_service(location_results.latitude, location_results.longitude).get_json_weather
     end
 
     def weekly_forecast_results
@@ -41,8 +41,8 @@ class WeatherForecast
 
 
     def location_results
-        results =google_service(location).get_json_coordinates
-        Location.new(results)
+        @results ||= google_service(location).get_json_coordinates
+        Location.new(@results)
     end
 
     def weather_service(latitude, longitude)

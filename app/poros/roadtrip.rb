@@ -21,8 +21,8 @@ class Roadtrip
     end
 
     def get_coordinates
-        data = google_service(@origin).get_travel_info(@origin, @destination)
-        data['routes'][0]['legs'][0]['end_location']
+        @data ||= google_service(@origin).get_travel_info(@origin, @destination)
+        @data['routes'][0]['legs'][0]['end_location']
     end
 
     def arrival_forecast
@@ -39,6 +39,6 @@ class Roadtrip
     end
 
     def weather_service(latitude, longitude)
-        DarkskyService.new(latitude, longitude)
+        @service ||= DarkskyService.new(latitude, longitude)
     end
 end
