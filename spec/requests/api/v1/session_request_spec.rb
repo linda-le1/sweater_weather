@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Sessions' do
-    it 'can login with valid credentials and their api key is returned', :vcr do
+    it 'can login with valid credentials and their api key is returned' , :vcr do
         User.create(email: 'whatever@example.com', password: 'password', password_confirmation: 'password')
 
             params = {
@@ -19,11 +19,29 @@ RSpec.describe 'Sessions' do
             expect(login_data['data']['attributes']['api_key']).not_to eql(nil)
     end
 
-    it 'can return an error message if invalid credentials are entered' do
+    it 'can return an error message if invalid password is entered', :vcr do
         User.create(email: 'whatever@example.com', password: 'password', password_confirmation: 'password')
 
             params = {
                         email: 'whatever@example.com',
+                        password: '12345',
+                    }
+
+            post '/api/v1/sessions', params: params
+
+            login_data = JSON.parse(response.body)
+
+            expect(response.status).to eq(400)
+
+            expect(login_data).to have_key('error')
+            expect(login_data['error']).to eql('Credentials are invalid. Please try again.')
+    end
+
+    it 'can return an error message if invalid email is entered', :vcr do
+        User.create(email: 'whatever@example.com', password: 'password', password_confirmation: 'password')
+
+            params = {
+                        email: 'admin123@example.com',
                         password: '12345',
                     }
 

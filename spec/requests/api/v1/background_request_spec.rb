@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe "Background Image" do
-  it 'can return background image based on location', :vcr do
+RSpec.describe "Background Image", :vcr do
+  it 'can return background image based on location' do
     location = 'denver,co'
     get "/api/v1/backgrounds?location=#{location}"
 

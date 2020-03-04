@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.unsplash.com/search/photos?page=1&query=denver%20co
+    uri: https://api.unsplash.com/search/photos?page=1&query=Denver%20CO
     body:
       encoding: US-ASCII
       string: ''
@@ -39,8 +39,8 @@ http_interactions:
       Access-Control-Expose-Headers:
       - Link,X-Total,X-Per-Page,X-RateLimit-Limit,X-RateLimit-Remaining
       Link:
-      - <https://api.unsplash.com/search/photos?page=127&query=denver+co>; rel="last",
-        <https://api.unsplash.com/search/photos?page=2&query=denver+co>; rel="next"
+      - <https://api.unsplash.com/search/photos?page=127&query=Denver+CO>; rel="last",
+        <https://api.unsplash.com/search/photos?page=2&query=Denver+CO>; rel="next"
       X-Total:
       - '1269'
       X-Per-Page:
@@ -52,9 +52,9 @@ http_interactions:
       X-Ratelimit-Remaining:
       - '49'
       X-Request-Id:
-      - e0e3371e-a822-4773-b42f-584a055ea94e
+      - cbbb4b82-03e3-4e4b-8f31-c490f9645964
       X-Runtime:
-      - '0.046369'
+      - '0.087239'
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains
       Via:
@@ -64,17 +64,17 @@ http_interactions:
       Accept-Ranges:
       - bytes
       Date:
-      - Wed, 04 Mar 2020 06:26:56 GMT
+      - Wed, 04 Mar 2020 06:26:05 GMT
       Age:
-      - '1023'
+      - '5664'
       X-Served-By:
-      - cache-iad2148-IAD, cache-den19642-DEN
+      - cache-iad2123-IAD, cache-den19622-DEN
       X-Cache:
       - MISS, HIT
       X-Cache-Hits:
       - 0, 1
       X-Timer:
-      - S1583303216.363405,VS0,VE1
+      - S1583303165.061685,VS0,VE2
       Vary:
       - Origin, Authorization
     body:
@@ -205,5 +205,5 @@ http_interactions:
         photographer and bricoleur. A collector of things wonderful. An eater of sweets.
         A drinker of tea. A designer of delight.","location":"San Francisco","links":{"self":"https://api.unsplash.com/users/erol","html":"https://unsplash.com/@erol","photos":"https://api.unsplash.com/users/erol/photos","likes":"https://api.unsplash.com/users/erol/likes","portfolio":"https://api.unsplash.com/users/erol/portfolio","following":"https://api.unsplash.com/users/erol/following","followers":"https://api.unsplash.com/users/erol/followers"},"profile_image":{"small":"https://images.unsplash.com/profile-1550448990648-cd509778101e?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=32&w=32","medium":"https://images.unsplash.com/profile-1550448990648-cd509778101e?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=64&w=64","large":"https://images.unsplash.com/profile-1550448990648-cd509778101e?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=128&w=128"},"instagram_username":"erol_is","total_collections":8,"total_likes":560,"total_photos":57,"accepted_tos":true},"tags":[{"type":"search","title":"denver"},{"type":"search","title":"machine"},{"type":"search","title":"atm"}]}]}'
     http_version: null
-  recorded_at: Wed, 04 Mar 2020 06:26:56 GMT
+  recorded_at: Wed, 04 Mar 2020 06:26:05 GMT
 recorded_with: VCR 5.1.0

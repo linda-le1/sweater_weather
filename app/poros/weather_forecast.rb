@@ -10,7 +10,7 @@ class WeatherForecast
         weather_service(location_results.latitude, location_results.longitude).get_json_weather
     end
 
-    def daily_forecast_results
+    def weekly_forecast_results
         weekly_weather_collection =[]
         forecast_results['daily']['data'].flat_map do |info|
             weekly_weather_collection << WeeklyWeatherForecast.new(info, location_results.timezone)
@@ -33,7 +33,7 @@ class WeatherForecast
         CurrentWeatherForecast.new(forecast_results, location_results.timezone)
     end
 
-    def current_evening_summary
+    def current_evening_results
         all_hourly_results.collect do |result|
             return result.summary if result.time.hour == 21
             end
