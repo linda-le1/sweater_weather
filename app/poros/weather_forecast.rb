@@ -10,7 +10,7 @@ class WeatherForecast
         weather_service(location_results.latitude, location_results.longitude).get_json_weather
     end
 
-    def daily_forecast_results
+    def weekly_forecast_results
         weekly_weather_collection =[]
         forecast_results['daily']['data'].flat_map do |info|
             weekly_weather_collection << WeeklyWeatherForecast.new(info, location_results.timezone)

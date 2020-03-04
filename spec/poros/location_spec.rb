@@ -2,6 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Location do
     it 'exists and has certain attributes', :vcr do
+        allow(Time).to receive(:now).and_return(Time.parse('2020-03-03 12:00:00 -0700'))
         location = 'Denver,CO'
         location_poro = WeatherForecast.new(location).location_results
 
