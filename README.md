@@ -1,5 +1,5 @@
 
-![](app/images/sweater_weather_json.png)
+![](app/images/sweater_weather_json.png =100x100)
 # Introduction
 This is a solo project for Mod 3 students. Students were required to utilize multiple APIs (some of which required an authentication token), and expose an API to aggregate data and for CRUD functionality. The complete set of project requirements and evaluation criteria can be found at https://backend.turing.io/module3/projects/sweater_weather/.
 
