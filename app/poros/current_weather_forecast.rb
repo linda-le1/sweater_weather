@@ -4,9 +4,9 @@ class CurrentWeatherForecast
     def initialize(info, timezone)
         @time = Time.now.in_time_zone(timezone)
         @summary= info['currently']['summary']
-        @precipitation_probability = (info['currently']['precipProbability'] * 100).to_s + '%'
         @temperature = info['currently']['temperature'].round(0)
         @apparent_temperature = info['currently']['apparentTemperature'].round(0)
+        @precipitation_probability = (info['currently']['precipProbability'] * 100).to_s + '%'
         @humidity = (info['currently']['humidity'] * 100).round(2).to_s + '%'
         @visibility = info['currently']['visibility'].round(2).to_s + ' miles'
         @uvIndex = if info['currently']['uvIndex'] >= 0 && info['currently']['uvIndex'] <= 2

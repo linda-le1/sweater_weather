@@ -9,6 +9,12 @@ class DarkskyService
         JSON.parse(@response.body)
     end
 
+    def get_future_weather(latitude, longitude, time)
+        @response ||= make_connection.get("#{ENV['DARKSKY_API']}/#{latitude},#{longitude},#{time}")
+        JSON.parse(@response.body)
+    end
+
+
     private
 
     def make_connection
