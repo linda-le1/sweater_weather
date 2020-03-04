@@ -1,9 +1,16 @@
 class Api::V1::RoadtripController < ApplicationController
 
     def create
-        authenticate_or_request_with_http_token do |token, _options|
-            User.find_by(token: token)
-          end
+        user = User.find_by(api_key: params['api_key'])
+        if user
+            Roadtrip.new(params['origin'], params['destination']))
+            render json: RoadtripSerializer.new(roadtrip), status: :ok
+        else
+            render json: {
+                error: "Something went wrong. Please try again.",
+                status: 400
+                            },
+                status: :bad_request
+        end
     end
-
 end
