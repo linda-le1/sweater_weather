@@ -9,4 +9,6 @@ Rails.application.routes.draw do
         post '/roadtrip', to: 'roadtrip#create'
       end
     end
+
+    get '/', to: 'welcome#index'
 end
