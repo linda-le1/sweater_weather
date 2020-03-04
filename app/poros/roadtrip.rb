@@ -7,14 +7,6 @@ class Roadtrip
         @destination = destination
     end
 
-    def origin
-        @origin
-    end
-
-    def destination
-        @destination
-    end
-
     def travel_time
         data = google_service(@origin).get_travel_info(@origin, @destination)
         data['routes'][0]['legs'][0]['duration']['text']

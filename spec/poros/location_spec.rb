@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Location do
-    it 'exists and has certain attributes' do
+    it 'exists and has certain attributes', :vcr do
         location = 'Denver,CO'
         location_poro = WeatherForecast.new(location).location_results
 

@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Background do
-    it 'exists and has certain attributes' do
+    it 'exists and has certain attributes', :vcr do
         location = 'Denver,CO'
         data = UnsplashService.new(location).get_json
         background_poro = Background.new(data)
