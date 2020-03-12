@@ -21,7 +21,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Thu, 12 Mar 2020 22:40:21 GMT
+      - Thu, 12 Mar 2020 22:40:12 GMT
       Pragma:
       - no-cache
       Expires:
@@ -39,7 +39,7 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Server-Timing:
-      - gfet4t7; dur=10
+      - gfet4t7; dur=15
       Alt-Svc:
       - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
         ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
@@ -131,7 +131,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Thu, 12 Mar 2020 22:40:21 GMT
+      - Thu, 12 Mar 2020 22:40:12 GMT
       Pragma:
       - no-cache
       Expires:
@@ -147,7 +147,7 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Server-Timing:
-      - gfet4t7; dur=6
+      - gfet4t7; dur=8
       Alt-Svc:
       - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
         ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
@@ -187,7 +187,167 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Thu, 12 Mar 2020 22:40:21 GMT
+      - Thu, 12 Mar 2020 22:40:13 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - mafe
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=11
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
+        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
+        ma=2592000
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "dstOffset" : 0,
+           "rawOffset" : -25200,
+           "status" : "OK",
+           "timeZoneId" : "America/Denver",
+           "timeZoneName" : "Mountain Standard Time"
+        }
+    http_version: null
+  recorded_at: Tue, 03 Mar 2020 19:00:00 GMT
+- request:
+    method: get
+    uri: https://api.darksky.net/forecast/<DARKSKY_API>/39.7392358,-104.990251?exclude=daily,hourly,minutely
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 12 Mar 2020 22:40:13 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '624'
+      Connection:
+      - keep-alive
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Authentication-Time:
+      - 344ms
+      X-Forecast-Api-Calls:
+      - '102'
+      Cache-Control:
+      - max-age=60
+      Expires:
+      - Thu, 12 Mar 2020 22:41:13 +0000
+      X-Response-Time:
+      - 7.877ms
+      Vary:
+      - Accept-Encoding
+    body:
+      encoding: UTF-8
+      string: '{"latitude":39.7392358,"longitude":-104.990251,"timezone":"America/Denver","currently":{"time":1584052813,"summary":"Mostly
+        Cloudy","icon":"partly-cloudy-day","nearestStormDistance":10,"nearestStormBearing":270,"precipIntensity":0,"precipProbability":0,"temperature":47.43,"apparentTemperature":44.73,"dewPoint":28.49,"humidity":0.48,"pressure":1012.9,"windSpeed":5.76,"windGust":11.43,"windBearing":13,"cloudCover":0.67,"uvIndex":1,"visibility":10,"ozone":328.7},"flags":{"sources":["nwspa","cmc","gfs","hrrr","icon","isd","madis","nam","sref","darksky","nearest-precip"],"nearest-station":1.334,"units":"us"},"offset":-6}
+
+'
+    http_version: null
+  recorded_at: Tue, 03 Mar 2020 19:00:00 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/timezone/json?key=<GEOCODE_API>&location=39.7392358,-104.990251&timestamp=1583262000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Thu, 12 Mar 2020 22:40:13 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - mafe
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=7
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
+        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
+        ma=2592000
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "dstOffset" : 0,
+           "rawOffset" : -25200,
+           "status" : "OK",
+           "timeZoneId" : "America/Denver",
+           "timeZoneName" : "Mountain Standard Time"
+        }
+    http_version: null
+  recorded_at: Tue, 03 Mar 2020 19:00:00 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/timezone/json?key=<GEOCODE_API>&location=39.7392358,-104.990251&timestamp=1583262000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Thu, 12 Mar 2020 22:40:13 GMT
       Pragma:
       - no-cache
       Expires:
@@ -204,6 +364,62 @@ http_interactions:
       - SAMEORIGIN
       Server-Timing:
       - gfet4t7; dur=8
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
+        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
+        ma=2592000
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "dstOffset" : 0,
+           "rawOffset" : -25200,
+           "status" : "OK",
+           "timeZoneId" : "America/Denver",
+           "timeZoneName" : "Mountain Standard Time"
+        }
+    http_version: null
+  recorded_at: Tue, 03 Mar 2020 19:00:00 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/timezone/json?key=<GEOCODE_API>&location=39.7392358,-104.990251&timestamp=1583262000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Thu, 12 Mar 2020 22:40:13 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - mafe
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=9
       Alt-Svc:
       - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
         ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
@@ -241,7 +457,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 12 Mar 2020 22:40:21 GMT
+      - Thu, 12 Mar 2020 22:40:14 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -251,15 +467,15 @@ http_interactions:
       Strict-Transport-Security:
       - max-age=31536000
       X-Authentication-Time:
-      - 518ms
+      - 1006ms
       X-Forecast-Api-Calls:
-      - '105'
+      - '103'
       Cache-Control:
       - max-age=3600
       Expires:
-      - Thu, 12 Mar 2020 23:40:21 +0000
+      - Thu, 12 Mar 2020 23:40:13 +0000
       X-Response-Time:
-      - 20.905ms
+      - 54.456ms
       Vary:
       - Accept-Encoding
     body:
@@ -328,847 +544,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Thu, 12 Mar 2020 22:40:21 GMT
-      Pragma:
-      - no-cache
-      Expires:
-      - Fri, 01 Jan 1990 00:00:00 GMT
-      Cache-Control:
-      - no-cache, must-revalidate
-      Access-Control-Allow-Origin:
-      - "*"
-      Server:
-      - mafe
-      X-Xss-Protection:
-      - '0'
-      X-Frame-Options:
-      - SAMEORIGIN
-      Server-Timing:
-      - gfet4t7; dur=8
-      Alt-Svc:
-      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
-        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
-        ma=2592000
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: ASCII-8BIT
-      string: |
-        {
-           "dstOffset" : 0,
-           "rawOffset" : -25200,
-           "status" : "OK",
-           "timeZoneId" : "America/Denver",
-           "timeZoneName" : "Mountain Standard Time"
-        }
-    http_version: null
-  recorded_at: Tue, 03 Mar 2020 19:00:00 GMT
-- request:
-    method: get
-    uri: https://maps.googleapis.com/maps/api/timezone/json?key=<GEOCODE_API>&location=39.7392358,-104.990251&timestamp=1583262000
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json; charset=UTF-8
-      Date:
-      - Thu, 12 Mar 2020 22:40:21 GMT
-      Pragma:
-      - no-cache
-      Expires:
-      - Fri, 01 Jan 1990 00:00:00 GMT
-      Cache-Control:
-      - no-cache, must-revalidate
-      Access-Control-Allow-Origin:
-      - "*"
-      Server:
-      - mafe
-      X-Xss-Protection:
-      - '0'
-      X-Frame-Options:
-      - SAMEORIGIN
-      Server-Timing:
-      - gfet4t7; dur=9
-      Alt-Svc:
-      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
-        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
-        ma=2592000
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: ASCII-8BIT
-      string: |
-        {
-           "dstOffset" : 0,
-           "rawOffset" : -25200,
-           "status" : "OK",
-           "timeZoneId" : "America/Denver",
-           "timeZoneName" : "Mountain Standard Time"
-        }
-    http_version: null
-  recorded_at: Tue, 03 Mar 2020 19:00:00 GMT
-- request:
-    method: get
-    uri: https://maps.googleapis.com/maps/api/timezone/json?key=<GEOCODE_API>&location=39.7392358,-104.990251&timestamp=1583262000
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json; charset=UTF-8
-      Date:
-      - Thu, 12 Mar 2020 22:40:21 GMT
-      Pragma:
-      - no-cache
-      Expires:
-      - Fri, 01 Jan 1990 00:00:00 GMT
-      Cache-Control:
-      - no-cache, must-revalidate
-      Access-Control-Allow-Origin:
-      - "*"
-      Server:
-      - mafe
-      X-Xss-Protection:
-      - '0'
-      X-Frame-Options:
-      - SAMEORIGIN
-      Server-Timing:
-      - gfet4t7; dur=7
-      Alt-Svc:
-      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
-        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
-        ma=2592000
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: ASCII-8BIT
-      string: |
-        {
-           "dstOffset" : 0,
-           "rawOffset" : -25200,
-           "status" : "OK",
-           "timeZoneId" : "America/Denver",
-           "timeZoneName" : "Mountain Standard Time"
-        }
-    http_version: null
-  recorded_at: Tue, 03 Mar 2020 19:00:00 GMT
-- request:
-    method: get
-    uri: https://maps.googleapis.com/maps/api/timezone/json?key=<GEOCODE_API>&location=39.7392358,-104.990251&timestamp=1583262000
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json; charset=UTF-8
-      Date:
-      - Thu, 12 Mar 2020 22:40:21 GMT
-      Pragma:
-      - no-cache
-      Expires:
-      - Fri, 01 Jan 1990 00:00:00 GMT
-      Cache-Control:
-      - no-cache, must-revalidate
-      Access-Control-Allow-Origin:
-      - "*"
-      Server:
-      - mafe
-      X-Xss-Protection:
-      - '0'
-      X-Frame-Options:
-      - SAMEORIGIN
-      Server-Timing:
-      - gfet4t7; dur=5
-      Alt-Svc:
-      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
-        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
-        ma=2592000
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: ASCII-8BIT
-      string: |
-        {
-           "dstOffset" : 0,
-           "rawOffset" : -25200,
-           "status" : "OK",
-           "timeZoneId" : "America/Denver",
-           "timeZoneName" : "Mountain Standard Time"
-        }
-    http_version: null
-  recorded_at: Tue, 03 Mar 2020 19:00:00 GMT
-- request:
-    method: get
-    uri: https://maps.googleapis.com/maps/api/timezone/json?key=<GEOCODE_API>&location=39.7392358,-104.990251&timestamp=1583262000
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json; charset=UTF-8
-      Date:
-      - Thu, 12 Mar 2020 22:40:22 GMT
-      Pragma:
-      - no-cache
-      Expires:
-      - Fri, 01 Jan 1990 00:00:00 GMT
-      Cache-Control:
-      - no-cache, must-revalidate
-      Access-Control-Allow-Origin:
-      - "*"
-      Server:
-      - mafe
-      X-Xss-Protection:
-      - '0'
-      X-Frame-Options:
-      - SAMEORIGIN
-      Server-Timing:
-      - gfet4t7; dur=9
-      Alt-Svc:
-      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
-        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
-        ma=2592000
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: ASCII-8BIT
-      string: |
-        {
-           "dstOffset" : 0,
-           "rawOffset" : -25200,
-           "status" : "OK",
-           "timeZoneId" : "America/Denver",
-           "timeZoneName" : "Mountain Standard Time"
-        }
-    http_version: null
-  recorded_at: Tue, 03 Mar 2020 19:00:00 GMT
-- request:
-    method: get
-    uri: https://maps.googleapis.com/maps/api/timezone/json?key=<GEOCODE_API>&location=39.7392358,-104.990251&timestamp=1583262000
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json; charset=UTF-8
-      Date:
-      - Thu, 12 Mar 2020 22:40:22 GMT
-      Pragma:
-      - no-cache
-      Expires:
-      - Fri, 01 Jan 1990 00:00:00 GMT
-      Cache-Control:
-      - no-cache, must-revalidate
-      Access-Control-Allow-Origin:
-      - "*"
-      Server:
-      - mafe
-      X-Xss-Protection:
-      - '0'
-      X-Frame-Options:
-      - SAMEORIGIN
-      Server-Timing:
-      - gfet4t7; dur=10
-      Alt-Svc:
-      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
-        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
-        ma=2592000
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: ASCII-8BIT
-      string: |
-        {
-           "dstOffset" : 0,
-           "rawOffset" : -25200,
-           "status" : "OK",
-           "timeZoneId" : "America/Denver",
-           "timeZoneName" : "Mountain Standard Time"
-        }
-    http_version: null
-  recorded_at: Tue, 03 Mar 2020 19:00:00 GMT
-- request:
-    method: get
-    uri: https://maps.googleapis.com/maps/api/timezone/json?key=<GEOCODE_API>&location=39.7392358,-104.990251&timestamp=1583262000
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json; charset=UTF-8
-      Date:
-      - Thu, 12 Mar 2020 22:40:22 GMT
-      Pragma:
-      - no-cache
-      Expires:
-      - Fri, 01 Jan 1990 00:00:00 GMT
-      Cache-Control:
-      - no-cache, must-revalidate
-      Access-Control-Allow-Origin:
-      - "*"
-      Server:
-      - mafe
-      X-Xss-Protection:
-      - '0'
-      X-Frame-Options:
-      - SAMEORIGIN
-      Server-Timing:
-      - gfet4t7; dur=8
-      Alt-Svc:
-      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
-        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
-        ma=2592000
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: ASCII-8BIT
-      string: |
-        {
-           "dstOffset" : 0,
-           "rawOffset" : -25200,
-           "status" : "OK",
-           "timeZoneId" : "America/Denver",
-           "timeZoneName" : "Mountain Standard Time"
-        }
-    http_version: null
-  recorded_at: Tue, 03 Mar 2020 19:00:00 GMT
-- request:
-    method: get
-    uri: https://maps.googleapis.com/maps/api/timezone/json?key=<GEOCODE_API>&location=39.7392358,-104.990251&timestamp=1583262000
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json; charset=UTF-8
-      Date:
-      - Thu, 12 Mar 2020 22:40:22 GMT
-      Pragma:
-      - no-cache
-      Expires:
-      - Fri, 01 Jan 1990 00:00:00 GMT
-      Cache-Control:
-      - no-cache, must-revalidate
-      Access-Control-Allow-Origin:
-      - "*"
-      Server:
-      - mafe
-      X-Xss-Protection:
-      - '0'
-      X-Frame-Options:
-      - SAMEORIGIN
-      Server-Timing:
-      - gfet4t7; dur=7
-      Alt-Svc:
-      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
-        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
-        ma=2592000
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: ASCII-8BIT
-      string: |
-        {
-           "dstOffset" : 0,
-           "rawOffset" : -25200,
-           "status" : "OK",
-           "timeZoneId" : "America/Denver",
-           "timeZoneName" : "Mountain Standard Time"
-        }
-    http_version: null
-  recorded_at: Tue, 03 Mar 2020 19:00:00 GMT
-- request:
-    method: get
-    uri: https://maps.googleapis.com/maps/api/timezone/json?key=<GEOCODE_API>&location=39.7392358,-104.990251&timestamp=1583262000
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json; charset=UTF-8
-      Date:
-      - Thu, 12 Mar 2020 22:40:22 GMT
-      Pragma:
-      - no-cache
-      Expires:
-      - Fri, 01 Jan 1990 00:00:00 GMT
-      Cache-Control:
-      - no-cache, must-revalidate
-      Access-Control-Allow-Origin:
-      - "*"
-      Server:
-      - mafe
-      X-Xss-Protection:
-      - '0'
-      X-Frame-Options:
-      - SAMEORIGIN
-      Server-Timing:
-      - gfet4t7; dur=9
-      Alt-Svc:
-      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
-        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
-        ma=2592000
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: ASCII-8BIT
-      string: |
-        {
-           "dstOffset" : 0,
-           "rawOffset" : -25200,
-           "status" : "OK",
-           "timeZoneId" : "America/Denver",
-           "timeZoneName" : "Mountain Standard Time"
-        }
-    http_version: null
-  recorded_at: Tue, 03 Mar 2020 19:00:00 GMT
-- request:
-    method: get
-    uri: https://maps.googleapis.com/maps/api/timezone/json?key=<GEOCODE_API>&location=39.7392358,-104.990251&timestamp=1583262000
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json; charset=UTF-8
-      Date:
-      - Thu, 12 Mar 2020 22:40:22 GMT
-      Pragma:
-      - no-cache
-      Expires:
-      - Fri, 01 Jan 1990 00:00:00 GMT
-      Cache-Control:
-      - no-cache, must-revalidate
-      Access-Control-Allow-Origin:
-      - "*"
-      Server:
-      - mafe
-      X-Xss-Protection:
-      - '0'
-      X-Frame-Options:
-      - SAMEORIGIN
-      Server-Timing:
-      - gfet4t7; dur=9
-      Alt-Svc:
-      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
-        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
-        ma=2592000
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: ASCII-8BIT
-      string: |
-        {
-           "dstOffset" : 0,
-           "rawOffset" : -25200,
-           "status" : "OK",
-           "timeZoneId" : "America/Denver",
-           "timeZoneName" : "Mountain Standard Time"
-        }
-    http_version: null
-  recorded_at: Tue, 03 Mar 2020 19:00:00 GMT
-- request:
-    method: get
-    uri: https://maps.googleapis.com/maps/api/timezone/json?key=<GEOCODE_API>&location=39.7392358,-104.990251&timestamp=1583262000
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json; charset=UTF-8
-      Date:
-      - Thu, 12 Mar 2020 22:40:22 GMT
-      Pragma:
-      - no-cache
-      Expires:
-      - Fri, 01 Jan 1990 00:00:00 GMT
-      Cache-Control:
-      - no-cache, must-revalidate
-      Access-Control-Allow-Origin:
-      - "*"
-      Server:
-      - mafe
-      X-Xss-Protection:
-      - '0'
-      X-Frame-Options:
-      - SAMEORIGIN
-      Server-Timing:
-      - gfet4t7; dur=8
-      Alt-Svc:
-      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
-        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
-        ma=2592000
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: ASCII-8BIT
-      string: |
-        {
-           "dstOffset" : 0,
-           "rawOffset" : -25200,
-           "status" : "OK",
-           "timeZoneId" : "America/Denver",
-           "timeZoneName" : "Mountain Standard Time"
-        }
-    http_version: null
-  recorded_at: Tue, 03 Mar 2020 19:00:00 GMT
-- request:
-    method: get
-    uri: https://maps.googleapis.com/maps/api/timezone/json?key=<GEOCODE_API>&location=39.7392358,-104.990251&timestamp=1583262000
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json; charset=UTF-8
-      Date:
-      - Thu, 12 Mar 2020 22:40:22 GMT
-      Pragma:
-      - no-cache
-      Expires:
-      - Fri, 01 Jan 1990 00:00:00 GMT
-      Cache-Control:
-      - no-cache, must-revalidate
-      Access-Control-Allow-Origin:
-      - "*"
-      Server:
-      - mafe
-      X-Xss-Protection:
-      - '0'
-      X-Frame-Options:
-      - SAMEORIGIN
-      Server-Timing:
-      - gfet4t7; dur=7
-      Alt-Svc:
-      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
-        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
-        ma=2592000
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: ASCII-8BIT
-      string: |
-        {
-           "dstOffset" : 0,
-           "rawOffset" : -25200,
-           "status" : "OK",
-           "timeZoneId" : "America/Denver",
-           "timeZoneName" : "Mountain Standard Time"
-        }
-    http_version: null
-  recorded_at: Tue, 03 Mar 2020 19:00:00 GMT
-- request:
-    method: get
-    uri: https://maps.googleapis.com/maps/api/timezone/json?key=<GEOCODE_API>&location=39.7392358,-104.990251&timestamp=1583262000
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json; charset=UTF-8
-      Date:
-      - Thu, 12 Mar 2020 22:40:23 GMT
-      Pragma:
-      - no-cache
-      Expires:
-      - Fri, 01 Jan 1990 00:00:00 GMT
-      Cache-Control:
-      - no-cache, must-revalidate
-      Access-Control-Allow-Origin:
-      - "*"
-      Server:
-      - mafe
-      X-Xss-Protection:
-      - '0'
-      X-Frame-Options:
-      - SAMEORIGIN
-      Server-Timing:
-      - gfet4t7; dur=7
-      Alt-Svc:
-      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
-        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
-        ma=2592000
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: ASCII-8BIT
-      string: |
-        {
-           "dstOffset" : 0,
-           "rawOffset" : -25200,
-           "status" : "OK",
-           "timeZoneId" : "America/Denver",
-           "timeZoneName" : "Mountain Standard Time"
-        }
-    http_version: null
-  recorded_at: Tue, 03 Mar 2020 19:00:00 GMT
-- request:
-    method: get
-    uri: https://maps.googleapis.com/maps/api/timezone/json?key=<GEOCODE_API>&location=39.7392358,-104.990251&timestamp=1583262000
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json; charset=UTF-8
-      Date:
-      - Thu, 12 Mar 2020 22:40:23 GMT
-      Pragma:
-      - no-cache
-      Expires:
-      - Fri, 01 Jan 1990 00:00:00 GMT
-      Cache-Control:
-      - no-cache, must-revalidate
-      Access-Control-Allow-Origin:
-      - "*"
-      Server:
-      - mafe
-      X-Xss-Protection:
-      - '0'
-      X-Frame-Options:
-      - SAMEORIGIN
-      Server-Timing:
-      - gfet4t7; dur=7
-      Alt-Svc:
-      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
-        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
-        ma=2592000
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: ASCII-8BIT
-      string: |
-        {
-           "dstOffset" : 0,
-           "rawOffset" : -25200,
-           "status" : "OK",
-           "timeZoneId" : "America/Denver",
-           "timeZoneName" : "Mountain Standard Time"
-        }
-    http_version: null
-  recorded_at: Tue, 03 Mar 2020 19:00:00 GMT
-- request:
-    method: get
-    uri: https://maps.googleapis.com/maps/api/timezone/json?key=<GEOCODE_API>&location=39.7392358,-104.990251&timestamp=1583262000
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json; charset=UTF-8
-      Date:
-      - Thu, 12 Mar 2020 22:40:23 GMT
-      Pragma:
-      - no-cache
-      Expires:
-      - Fri, 01 Jan 1990 00:00:00 GMT
-      Cache-Control:
-      - no-cache, must-revalidate
-      Access-Control-Allow-Origin:
-      - "*"
-      Server:
-      - mafe
-      X-Xss-Protection:
-      - '0'
-      X-Frame-Options:
-      - SAMEORIGIN
-      Server-Timing:
-      - gfet4t7; dur=9
-      Alt-Svc:
-      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
-        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
-        ma=2592000
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: ASCII-8BIT
-      string: |
-        {
-           "dstOffset" : 0,
-           "rawOffset" : -25200,
-           "status" : "OK",
-           "timeZoneId" : "America/Denver",
-           "timeZoneName" : "Mountain Standard Time"
-        }
-    http_version: null
-  recorded_at: Tue, 03 Mar 2020 19:00:00 GMT
-- request:
-    method: get
-    uri: https://maps.googleapis.com/maps/api/timezone/json?key=<GEOCODE_API>&location=39.7392358,-104.990251&timestamp=1583262000
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json; charset=UTF-8
-      Date:
-      - Thu, 12 Mar 2020 22:40:23 GMT
+      - Thu, 12 Mar 2020 22:40:14 GMT
       Pragma:
       - no-cache
       Expires:
@@ -1224,7 +600,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Thu, 12 Mar 2020 22:40:23 GMT
+      - Thu, 12 Mar 2020 22:40:14 GMT
       Pragma:
       - no-cache
       Expires:
@@ -1240,7 +616,7 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Server-Timing:
-      - gfet4t7; dur=7
+      - gfet4t7; dur=14
       Alt-Svc:
       - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
         ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
@@ -1280,175 +656,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Thu, 12 Mar 2020 22:40:23 GMT
-      Pragma:
-      - no-cache
-      Expires:
-      - Fri, 01 Jan 1990 00:00:00 GMT
-      Cache-Control:
-      - no-cache, must-revalidate
-      Access-Control-Allow-Origin:
-      - "*"
-      Server:
-      - mafe
-      X-Xss-Protection:
-      - '0'
-      X-Frame-Options:
-      - SAMEORIGIN
-      Server-Timing:
-      - gfet4t7; dur=7
-      Alt-Svc:
-      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
-        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
-        ma=2592000
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: ASCII-8BIT
-      string: |
-        {
-           "dstOffset" : 0,
-           "rawOffset" : -25200,
-           "status" : "OK",
-           "timeZoneId" : "America/Denver",
-           "timeZoneName" : "Mountain Standard Time"
-        }
-    http_version: null
-  recorded_at: Tue, 03 Mar 2020 19:00:00 GMT
-- request:
-    method: get
-    uri: https://maps.googleapis.com/maps/api/timezone/json?key=<GEOCODE_API>&location=39.7392358,-104.990251&timestamp=1583262000
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json; charset=UTF-8
-      Date:
-      - Thu, 12 Mar 2020 22:40:23 GMT
-      Pragma:
-      - no-cache
-      Expires:
-      - Fri, 01 Jan 1990 00:00:00 GMT
-      Cache-Control:
-      - no-cache, must-revalidate
-      Access-Control-Allow-Origin:
-      - "*"
-      Server:
-      - mafe
-      X-Xss-Protection:
-      - '0'
-      X-Frame-Options:
-      - SAMEORIGIN
-      Server-Timing:
-      - gfet4t7; dur=7
-      Alt-Svc:
-      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
-        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
-        ma=2592000
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: ASCII-8BIT
-      string: |
-        {
-           "dstOffset" : 0,
-           "rawOffset" : -25200,
-           "status" : "OK",
-           "timeZoneId" : "America/Denver",
-           "timeZoneName" : "Mountain Standard Time"
-        }
-    http_version: null
-  recorded_at: Tue, 03 Mar 2020 19:00:00 GMT
-- request:
-    method: get
-    uri: https://maps.googleapis.com/maps/api/timezone/json?key=<GEOCODE_API>&location=39.7392358,-104.990251&timestamp=1583262000
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json; charset=UTF-8
-      Date:
-      - Thu, 12 Mar 2020 22:40:23 GMT
-      Pragma:
-      - no-cache
-      Expires:
-      - Fri, 01 Jan 1990 00:00:00 GMT
-      Cache-Control:
-      - no-cache, must-revalidate
-      Access-Control-Allow-Origin:
-      - "*"
-      Server:
-      - mafe
-      X-Xss-Protection:
-      - '0'
-      X-Frame-Options:
-      - SAMEORIGIN
-      Server-Timing:
-      - gfet4t7; dur=9
-      Alt-Svc:
-      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
-        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
-        ma=2592000
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: ASCII-8BIT
-      string: |
-        {
-           "dstOffset" : 0,
-           "rawOffset" : -25200,
-           "status" : "OK",
-           "timeZoneId" : "America/Denver",
-           "timeZoneName" : "Mountain Standard Time"
-        }
-    http_version: null
-  recorded_at: Tue, 03 Mar 2020 19:00:00 GMT
-- request:
-    method: get
-    uri: https://maps.googleapis.com/maps/api/timezone/json?key=<GEOCODE_API>&location=39.7392358,-104.990251&timestamp=1583262000
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json; charset=UTF-8
-      Date:
-      - Thu, 12 Mar 2020 22:40:23 GMT
+      - Thu, 12 Mar 2020 22:40:14 GMT
       Pragma:
       - no-cache
       Expires:
@@ -1504,7 +712,343 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Thu, 12 Mar 2020 22:40:24 GMT
+      - Thu, 12 Mar 2020 22:40:14 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - mafe
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=9
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
+        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
+        ma=2592000
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "dstOffset" : 0,
+           "rawOffset" : -25200,
+           "status" : "OK",
+           "timeZoneId" : "America/Denver",
+           "timeZoneName" : "Mountain Standard Time"
+        }
+    http_version: null
+  recorded_at: Tue, 03 Mar 2020 19:00:00 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/timezone/json?key=<GEOCODE_API>&location=39.7392358,-104.990251&timestamp=1583262000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Thu, 12 Mar 2020 22:40:14 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - mafe
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=21
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
+        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
+        ma=2592000
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "dstOffset" : 0,
+           "rawOffset" : -25200,
+           "status" : "OK",
+           "timeZoneId" : "America/Denver",
+           "timeZoneName" : "Mountain Standard Time"
+        }
+    http_version: null
+  recorded_at: Tue, 03 Mar 2020 19:00:00 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/timezone/json?key=<GEOCODE_API>&location=39.7392358,-104.990251&timestamp=1583262000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Thu, 12 Mar 2020 22:40:14 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - mafe
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=10
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
+        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
+        ma=2592000
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "dstOffset" : 0,
+           "rawOffset" : -25200,
+           "status" : "OK",
+           "timeZoneId" : "America/Denver",
+           "timeZoneName" : "Mountain Standard Time"
+        }
+    http_version: null
+  recorded_at: Tue, 03 Mar 2020 19:00:00 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/timezone/json?key=<GEOCODE_API>&location=39.7392358,-104.990251&timestamp=1583262000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Thu, 12 Mar 2020 22:40:14 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - mafe
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=9
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
+        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
+        ma=2592000
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "dstOffset" : 0,
+           "rawOffset" : -25200,
+           "status" : "OK",
+           "timeZoneId" : "America/Denver",
+           "timeZoneName" : "Mountain Standard Time"
+        }
+    http_version: null
+  recorded_at: Tue, 03 Mar 2020 19:00:00 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/timezone/json?key=<GEOCODE_API>&location=39.7392358,-104.990251&timestamp=1583262000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Thu, 12 Mar 2020 22:40:15 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - mafe
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=25
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
+        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
+        ma=2592000
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "dstOffset" : 0,
+           "rawOffset" : -25200,
+           "status" : "OK",
+           "timeZoneId" : "America/Denver",
+           "timeZoneName" : "Mountain Standard Time"
+        }
+    http_version: null
+  recorded_at: Tue, 03 Mar 2020 19:00:00 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/timezone/json?key=<GEOCODE_API>&location=39.7392358,-104.990251&timestamp=1583262000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Thu, 12 Mar 2020 22:40:15 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - mafe
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=10
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
+        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
+        ma=2592000
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "dstOffset" : 0,
+           "rawOffset" : -25200,
+           "status" : "OK",
+           "timeZoneId" : "America/Denver",
+           "timeZoneName" : "Mountain Standard Time"
+        }
+    http_version: null
+  recorded_at: Tue, 03 Mar 2020 19:00:00 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/timezone/json?key=<GEOCODE_API>&location=39.7392358,-104.990251&timestamp=1583262000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Thu, 12 Mar 2020 22:40:15 GMT
       Pragma:
       - no-cache
       Expires:
@@ -1560,7 +1104,231 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Thu, 12 Mar 2020 22:40:24 GMT
+      - Thu, 12 Mar 2020 22:40:15 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - mafe
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=19
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
+        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
+        ma=2592000
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "dstOffset" : 0,
+           "rawOffset" : -25200,
+           "status" : "OK",
+           "timeZoneId" : "America/Denver",
+           "timeZoneName" : "Mountain Standard Time"
+        }
+    http_version: null
+  recorded_at: Tue, 03 Mar 2020 19:00:00 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/timezone/json?key=<GEOCODE_API>&location=39.7392358,-104.990251&timestamp=1583262000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Thu, 12 Mar 2020 22:40:15 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - mafe
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=7
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
+        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
+        ma=2592000
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "dstOffset" : 0,
+           "rawOffset" : -25200,
+           "status" : "OK",
+           "timeZoneId" : "America/Denver",
+           "timeZoneName" : "Mountain Standard Time"
+        }
+    http_version: null
+  recorded_at: Tue, 03 Mar 2020 19:00:00 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/timezone/json?key=<GEOCODE_API>&location=39.7392358,-104.990251&timestamp=1583262000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Thu, 12 Mar 2020 22:40:15 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - mafe
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=10
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
+        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
+        ma=2592000
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "dstOffset" : 0,
+           "rawOffset" : -25200,
+           "status" : "OK",
+           "timeZoneId" : "America/Denver",
+           "timeZoneName" : "Mountain Standard Time"
+        }
+    http_version: null
+  recorded_at: Tue, 03 Mar 2020 19:00:00 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/timezone/json?key=<GEOCODE_API>&location=39.7392358,-104.990251&timestamp=1583262000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Thu, 12 Mar 2020 22:40:15 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - mafe
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=15
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
+        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
+        ma=2592000
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "dstOffset" : 0,
+           "rawOffset" : -25200,
+           "status" : "OK",
+           "timeZoneId" : "America/Denver",
+           "timeZoneName" : "Mountain Standard Time"
+        }
+    http_version: null
+  recorded_at: Tue, 03 Mar 2020 19:00:00 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/timezone/json?key=<GEOCODE_API>&location=39.7392358,-104.990251&timestamp=1583262000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Thu, 12 Mar 2020 22:40:15 GMT
       Pragma:
       - no-cache
       Expires:
@@ -1616,7 +1384,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Thu, 12 Mar 2020 22:40:24 GMT
+      - Thu, 12 Mar 2020 22:40:16 GMT
       Pragma:
       - no-cache
       Expires:
@@ -1672,7 +1440,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Thu, 12 Mar 2020 22:40:24 GMT
+      - Thu, 12 Mar 2020 22:40:16 GMT
       Pragma:
       - no-cache
       Expires:
@@ -1688,7 +1456,455 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Server-Timing:
-      - gfet4t7; dur=20
+      - gfet4t7; dur=10
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
+        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
+        ma=2592000
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "dstOffset" : 0,
+           "rawOffset" : -25200,
+           "status" : "OK",
+           "timeZoneId" : "America/Denver",
+           "timeZoneName" : "Mountain Standard Time"
+        }
+    http_version: null
+  recorded_at: Tue, 03 Mar 2020 19:00:00 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/timezone/json?key=<GEOCODE_API>&location=39.7392358,-104.990251&timestamp=1583262000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Thu, 12 Mar 2020 22:40:16 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - mafe
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=7
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
+        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
+        ma=2592000
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "dstOffset" : 0,
+           "rawOffset" : -25200,
+           "status" : "OK",
+           "timeZoneId" : "America/Denver",
+           "timeZoneName" : "Mountain Standard Time"
+        }
+    http_version: null
+  recorded_at: Tue, 03 Mar 2020 19:00:00 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/timezone/json?key=<GEOCODE_API>&location=39.7392358,-104.990251&timestamp=1583262000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Thu, 12 Mar 2020 22:40:16 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - mafe
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=9
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
+        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
+        ma=2592000
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "dstOffset" : 0,
+           "rawOffset" : -25200,
+           "status" : "OK",
+           "timeZoneId" : "America/Denver",
+           "timeZoneName" : "Mountain Standard Time"
+        }
+    http_version: null
+  recorded_at: Tue, 03 Mar 2020 19:00:00 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/timezone/json?key=<GEOCODE_API>&location=39.7392358,-104.990251&timestamp=1583262000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Thu, 12 Mar 2020 22:40:16 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - mafe
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=9
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
+        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
+        ma=2592000
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "dstOffset" : 0,
+           "rawOffset" : -25200,
+           "status" : "OK",
+           "timeZoneId" : "America/Denver",
+           "timeZoneName" : "Mountain Standard Time"
+        }
+    http_version: null
+  recorded_at: Tue, 03 Mar 2020 19:00:00 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/timezone/json?key=<GEOCODE_API>&location=39.7392358,-104.990251&timestamp=1583262000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Thu, 12 Mar 2020 22:40:16 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - mafe
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=11
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
+        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
+        ma=2592000
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "dstOffset" : 0,
+           "rawOffset" : -25200,
+           "status" : "OK",
+           "timeZoneId" : "America/Denver",
+           "timeZoneName" : "Mountain Standard Time"
+        }
+    http_version: null
+  recorded_at: Tue, 03 Mar 2020 19:00:00 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/timezone/json?key=<GEOCODE_API>&location=39.7392358,-104.990251&timestamp=1583262000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Thu, 12 Mar 2020 22:40:16 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - mafe
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=8
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
+        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
+        ma=2592000
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "dstOffset" : 0,
+           "rawOffset" : -25200,
+           "status" : "OK",
+           "timeZoneId" : "America/Denver",
+           "timeZoneName" : "Mountain Standard Time"
+        }
+    http_version: null
+  recorded_at: Tue, 03 Mar 2020 19:00:00 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/timezone/json?key=<GEOCODE_API>&location=39.7392358,-104.990251&timestamp=1583262000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Thu, 12 Mar 2020 22:40:16 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - mafe
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=17
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
+        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
+        ma=2592000
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "dstOffset" : 0,
+           "rawOffset" : -25200,
+           "status" : "OK",
+           "timeZoneId" : "America/Denver",
+           "timeZoneName" : "Mountain Standard Time"
+        }
+    http_version: null
+  recorded_at: Tue, 03 Mar 2020 19:00:00 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/timezone/json?key=<GEOCODE_API>&location=39.7392358,-104.990251&timestamp=1583262000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Thu, 12 Mar 2020 22:40:16 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - mafe
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=8
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
+        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
+        ma=2592000
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "dstOffset" : 0,
+           "rawOffset" : -25200,
+           "status" : "OK",
+           "timeZoneId" : "America/Denver",
+           "timeZoneName" : "Mountain Standard Time"
+        }
+    http_version: null
+  recorded_at: Tue, 03 Mar 2020 19:00:00 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/timezone/json?key=<GEOCODE_API>&location=39.7392358,-104.990251&timestamp=1583262000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Thu, 12 Mar 2020 22:40:17 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - mafe
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=17
       Alt-Svc:
       - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
         ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
