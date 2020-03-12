@@ -13,5 +13,6 @@ RSpec.describe HourlyWeatherForecast do
         expect(hourly_weather_poros[0].time).to eq('2020-03-12 16:00:00.000000000 -0600')
         expect(hourly_weather_poros[0].summary).to eq('Mostly Cloudy')
         expect(hourly_weather_poros[0].temperature).to eq(48)
+        expect(hourly_weather_poros[0].icon).to eq('partly-cloudy-day')
     end
 end

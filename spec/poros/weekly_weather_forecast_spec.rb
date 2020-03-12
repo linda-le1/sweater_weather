@@ -15,5 +15,6 @@ RSpec.describe WeeklyWeatherForecast, :vcr do
         expect(weekly_weather_poros[0].temperature_low).to eq(32)
         expect(weekly_weather_poros[0].temperature_high).to eq(53)
         expect(weekly_weather_poros[0].humidity).to eq('43.0%')
+        expect(weekly_weather_poros[0].icon).to eq('rain')
     end
 end

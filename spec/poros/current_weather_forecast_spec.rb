@@ -15,5 +15,6 @@ RSpec.describe CurrentWeatherForecast do
         expect(current_weather_poro.humidity).to eq('47.0%')
         expect(current_weather_poro.visibility).to eq('10 miles')
         expect(current_weather_poro.uvIndex).to eq('1 (Low)')
+        expect(current_weather_poro.icon).to eq('partly-cloudy-day')
     end
 end

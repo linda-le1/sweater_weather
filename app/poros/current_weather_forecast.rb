@@ -1,9 +1,10 @@
 class CurrentWeatherForecast
-    attr_reader :summary, :precipitation_probability, :temperature, :apparent_temperature, :humidity, :visibility, :uvIndex, :time
+    attr_reader :summary, :icon, :precipitation_probability, :temperature, :apparent_temperature, :humidity, :visibility, :uvIndex, :time
 
     def initialize(info, timezone)
         @time = Time.now.in_time_zone(timezone)
         @summary= info['currently']['summary']
+        @icon = info['currently']['icon']
         @temperature = info['currently']['temperature'].round(0)
         @apparent_temperature = info['currently']['apparentTemperature'].round(0)
         @precipitation_probability = (info['currently']['precipProbability'] * 100).to_s + '%'
