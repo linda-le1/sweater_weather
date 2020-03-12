@@ -5,8 +5,13 @@ class Location
         @latitude= info[0]['geometry']['location']['lat']
         @longitude = info[0]['geometry']['location']['lng']
         @city = info[0]['address_components'][0]['long_name']
-        @state = info[0]['address_components'][2]['long_name']
-        @country = info[0]['address_components'][3]['long_name']
+        if info[0]['address_components'].count >= 3
+            @state = info[0]['address_components'][2]['long_name']
+            @country = info[0]['address_components'][3]['long_name']
+        else
+            @state = 'n/a'
+            @country = info[0]['address_components'][1]['long_name']
+        end
         @timezone = Timezone.lookup(@latitude, @longitude).to_s
     end
 
