@@ -8,12 +8,12 @@ RSpec.describe CurrentWeatherForecast do
 
         expect(current_weather_poro).to be_a CurrentWeatherForecast
         expect(current_weather_poro.time).to eq('2020-03-03 12:00:00.000000000 -0700')
-        expect(current_weather_poro.summary).to eq('Clear')
-        expect(current_weather_poro.temperature).to eq(41)
-        expect(current_weather_poro.apparent_temperature).to eq(40)
+        expect(current_weather_poro.summary).to eq('Mostly Cloudy')
+        expect(current_weather_poro.temperature).to eq(48)
+        expect(current_weather_poro.apparent_temperature).to eq(45)
         expect(current_weather_poro.precipitation_probability).to eq('0%')
-        expect(current_weather_poro.humidity).to eq('40.0%')
+        expect(current_weather_poro.humidity).to eq('47.0%')
         expect(current_weather_poro.visibility).to eq('10 miles')
-        expect(current_weather_poro.uvIndex).to eq('0 (Low)')
+        expect(current_weather_poro.uvIndex).to eq('1 (Low)')
     end
 end
