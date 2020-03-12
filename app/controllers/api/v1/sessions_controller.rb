@@ -7,8 +7,7 @@ class Api::V1::SessionsController < ApplicationController
             render json: UserSerializer.new(user), status: :ok
         else
             render json: {
-                error: 'Credentials are invalid. Please try again.',
-                status: 400
+                error: 'Credentials are invalid. Please try again.'
                             },
                 status: :bad_request
         end
