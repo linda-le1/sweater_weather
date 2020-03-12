@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe CurrentWeatherForecast do
     it 'exists and has certain attributes', :vcr do
         allow(Time).to receive(:now).and_return(Time.parse('2020-03-03 12:00:00 -0700'))
-        forecast_data = DarkskyService.new(39.7392358, -104.990251).get_json_weather
+        forecast_data = DarkskyService.new(39.7392358, -104.990251).get_summary_weather
         current_weather_poro = CurrentWeatherForecast.new(forecast_data, 'America/Denver')
 
         expect(current_weather_poro).to be_a CurrentWeatherForecast
