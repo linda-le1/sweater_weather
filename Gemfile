@@ -9,7 +9,7 @@ gem 'fast_jsonapi'
 gem 'faraday'
 gem 'figaro'
 gem 'pg', '>= 0.18', '< 2.0'
-gem 'puma', '~> 4.1'
+gem 'puma', '~> 4.3'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
 gem 'timezone'
 
