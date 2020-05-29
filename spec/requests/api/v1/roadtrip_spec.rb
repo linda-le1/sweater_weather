@@ -3,12 +3,12 @@ require 'rails_helper'
 RSpec.describe 'Roadtrips' do
     it "allows the user to get info when valid api token is provided", :vcr do
         allow(Time).to receive(:now).and_return(Time.parse('2020-03-03 12:00:00 -0700'))
-        User.create(email: 'whatever@example.com', password: '123', password_confirmation: '123', api_key: "jgn983hy48thw9begh98h4539h4")
+        User.create(email: 'whatever@example.com', password: '123', password_confirmation: '123', api_key: ENV['API_Key'])
 
         params = {
             "origin": "Denver,CO",
             "destination": "Pueblo,CO",
-            "api_key": "jgn983hy48thw9begh98h4539h4"
+            "api_key": ENV['API_Key']
                 }
 
         post "/api/v1/roadtrip", params: params
@@ -24,7 +24,7 @@ RSpec.describe 'Roadtrips' do
 
     it "allows does not allow user to get info when invalid api token is provided" do
         allow(Time).to receive(:now).and_return(Time.parse('2020-03-03 12:00:00 -0700'))
-        User.create(email: 'whatever@example.com', password: '123', password_confirmation: '123', api_key: "jgn983hy48thw9begh98h4539h4")
+        User.create(email: 'whatever@example.com', password: '123', password_confirmation: '123', api_key: ENV['API_Key'])
 
         params = {
             "origin": "Denver,CO",
