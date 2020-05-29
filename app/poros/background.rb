@@ -3,6 +3,10 @@ class Background
 
     def initialize(info)
         @id = nil
-        @url = info['results'][0]['links']['html']
+        @url = if info['results'].empty?
+                []
+            else
+                info['results'][0]['links']['html']
+            end
     end
 end
