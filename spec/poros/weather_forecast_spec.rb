@@ -34,7 +34,7 @@ RSpec.describe WeatherForecast, :vcr do
 
     it 'can return current evening results' do
         evening_forecast = @weather_forecast_poro.current_evening_results
-        expect(evening_forecast).to eq('Overcast')
+        expect(evening_forecast).to eq('Clear')
     end
 
     it 'can return coordinates' do

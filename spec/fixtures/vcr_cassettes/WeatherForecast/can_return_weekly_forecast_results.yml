@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Faraday v1.0.0
+      - Faraday v1.0.1
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -21,7 +21,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Thu, 12 Mar 2020 22:40:24 GMT
+      - Fri, 29 May 2020 21:22:12 GMT
       Pragma:
       - no-cache
       Expires:
@@ -32,6 +32,8 @@ http_interactions:
       - Accept-Language
       Access-Control-Allow-Origin:
       - "*"
+      X-Goog-Maps-Metro-Area:
+      - Denver, CO
       Server:
       - mafe
       X-Xss-Protection:
@@ -39,11 +41,11 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Server-Timing:
-      - gfet4t7; dur=16
+      - gfet4t7; dur=19
       Alt-Svc:
-      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
-        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
-        ma=2592000
+      - h3-27=":443"; ma=2592000,h3-25=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q050=":443";
+        ma=2592000,h3-Q049=":443"; ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443";
+        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
       Transfer-Encoding:
       - chunked
     body:
@@ -52,6 +54,67 @@ http_interactions:
         {
            "results" : [
               {
+                 "access_points" : [
+                    {
+                       "access_point_type" : "TYPE_ESTABLISHMENT_POI",
+                       "location" : {
+                          "latitude" : 39.750605,
+                          "longitude" : -104.990926
+                       },
+                       "place_id" : "ChIJrYXVe9l4bIcRvhpeKUy2jFQ",
+                       "unsuitable_travel_modes" : []
+                    },
+                    {
+                       "access_point_type" : "TYPE_ESTABLISHMENT_POI",
+                       "location" : {
+                          "latitude" : 39.7413409,
+                          "longitude" : -104.9871046
+                       },
+                       "place_id" : "ChIJF2OWCtV4bIcRXOq29vexYYw",
+                       "unsuitable_travel_modes" : []
+                    },
+                    {
+                       "access_point_type" : "TYPE_ESTABLISHMENT_POI",
+                       "location" : {
+                          "latitude" : 39.7475106,
+                          "longitude" : -104.9902467
+                       },
+                       "place_id" : "ChIJP3XiZ9d4bIcRk1e20daTGyM",
+                       "unsuitable_travel_modes" : []
+                    },
+                    {
+                       "access_point_type" : "TYPE_ESTABLISHMENT_POI",
+                       "location" : {
+                          "latitude" : 39.7532252,
+                          "longitude" : -105.000271
+                       },
+                       "place_id" : "ChIJp1O7GMJ4bIcRe1DPdZF2FaA",
+                       "unsuitable_travel_modes" : []
+                    },
+                    {
+                       "access_point_type" : "TYPE_ESTABLISHMENT_POI",
+                       "location" : {
+                          "latitude" : 39.750385,
+                          "longitude" : -104.99155
+                       },
+                       "place_id" : "ChIJM6mY1dt4bIcR-xv9Qz-KIeY",
+                       "unsuitable_travel_modes" : []
+                    },
+                    {
+                       "access_point_type" : "TYPE_SEGMENT",
+                       "location" : {
+                          "latitude" : 39.7411148,
+                          "longitude" : -104.9879685
+                       },
+                       "location_on_segment" : {
+                          "latitude" : 39.7411598,
+                          "longitude" : -104.9879112
+                       },
+                       "place_id" : "ChIJUaiVsdV4bIcRHK6bQEoY2o4",
+                       "segment_position" : 1,
+                       "unsuitable_travel_modes" : []
+                    }
+                 ],
                  "address_components" : [
                     {
                        "long_name" : "Denver",
@@ -108,7 +171,6 @@ http_interactions:
            ],
            "status" : "OK"
         }
-    http_version: null
   recorded_at: Tue, 03 Mar 2020 19:00:00 GMT
 - request:
     method: get
@@ -131,7 +193,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Thu, 12 Mar 2020 22:40:24 GMT
+      - Fri, 29 May 2020 21:22:12 GMT
       Pragma:
       - no-cache
       Expires:
@@ -147,11 +209,11 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Server-Timing:
-      - gfet4t7; dur=9
+      - gfet4t7; dur=19
       Alt-Svc:
-      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
-        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
-        ma=2592000
+      - h3-27=":443"; ma=2592000,h3-25=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q050=":443";
+        ma=2592000,h3-Q049=":443"; ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443";
+        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
       Transfer-Encoding:
       - chunked
     body:
@@ -164,7 +226,6 @@ http_interactions:
            "timeZoneId" : "America/Denver",
            "timeZoneName" : "Mountain Standard Time"
         }
-    http_version: null
   recorded_at: Tue, 03 Mar 2020 19:00:00 GMT
 - request:
     method: get
@@ -187,7 +248,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Thu, 12 Mar 2020 22:40:24 GMT
+      - Fri, 29 May 2020 21:22:12 GMT
       Pragma:
       - no-cache
       Expires:
@@ -203,11 +264,11 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Server-Timing:
-      - gfet4t7; dur=6
+      - gfet4t7; dur=10
       Alt-Svc:
-      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
-        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
-        ma=2592000
+      - h3-27=":443"; ma=2592000,h3-25=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q050=":443";
+        ma=2592000,h3-Q049=":443"; ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443";
+        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
       Transfer-Encoding:
       - chunked
     body:
@@ -220,7 +281,6 @@ http_interactions:
            "timeZoneId" : "America/Denver",
            "timeZoneName" : "Mountain Standard Time"
         }
-    http_version: null
   recorded_at: Tue, 03 Mar 2020 19:00:00 GMT
 - request:
     method: get
@@ -230,7 +290,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Faraday v1.0.0
+      - Faraday v1.0.1
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -241,7 +301,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 12 Mar 2020 22:40:25 GMT
+      - Fri, 29 May 2020 21:22:13 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -251,32 +311,54 @@ http_interactions:
       Strict-Transport-Security:
       - max-age=31536000
       X-Authentication-Time:
-      - 168ms
+      - 65ms
       X-Forecast-Api-Calls:
-      - '106'
+      - '21'
       Cache-Control:
       - max-age=3600
       Expires:
-      - Thu, 12 Mar 2020 23:40:25 +0000
+      - Fri, 29 May 2020 22:22:13 +0000
       X-Response-Time:
-      - 48.419ms
+      - 36.848ms
       Vary:
       - Accept-Encoding
     body:
       encoding: ASCII-8BIT
-      string: '{"latitude":39.7392358,"longitude":-104.990251,"timezone":"America/Denver","daily":{"summary":"Heavy
-        rain throughout the week.","icon":"rain","data":[{"time":1583992800,"summary":"Mostly
-        cloudy throughout the day.","icon":"rain","sunriseTime":1584018960,"sunsetTime":1584061500,"moonPhase":0.63,"precipIntensity":0.0233,"precipIntensityMax":1.0141,"precipIntensityMaxTime":1583992800,"precipProbability":0.5,"precipType":"rain","temperatureHigh":53.35,"temperatureHighTime":1584021060,"temperatureLow":32.26,"temperatureLowTime":1584108000,"apparentTemperatureHigh":52.85,"apparentTemperatureHighTime":1584021060,"apparentTemperatureLow":26.57,"apparentTemperatureLowTime":1584108000,"dewPoint":25.61,"humidity":0.43,"pressure":1011.9,"windSpeed":6.49,"windGust":19.95,"windGustTime":1584022200,"windBearing":35,"cloudCover":0.73,"uvIndex":4,"uvIndexTime":1584040260,"visibility":10,"ozone":343.5,"temperatureMin":37.99,"temperatureMinTime":1584079200,"temperatureMax":56.15,"temperatureMaxTime":1583995260,"apparentTemperatureMin":34.89,"apparentTemperatureMinTime":1584079200,"apparentTemperatureMax":55.65,"apparentTemperatureMaxTime":1583995260},{"time":1584079200,"summary":"Snow
-        (< 1 in.) in the morning.","icon":"rain","sunriseTime":1584105300,"sunsetTime":1584147960,"moonPhase":0.67,"precipIntensity":0.0063,"precipIntensityMax":0.0555,"precipIntensityMaxTime":1584111600,"precipProbability":0.49,"precipType":"rain","temperatureHigh":51.29,"temperatureHighTime":1584133860,"temperatureLow":32.66,"temperatureLowTime":1584188280,"apparentTemperatureHigh":51.3,"apparentTemperatureHighTime":1584134520,"apparentTemperatureLow":31.54,"apparentTemperatureLowTime":1584179400,"dewPoint":25.8,"humidity":0.58,"pressure":1013,"windSpeed":7.56,"windGust":23.01,"windGustTime":1584131400,"windBearing":156,"cloudCover":0.74,"uvIndex":5,"uvIndexTime":1584127860,"visibility":10,"ozone":314.9,"temperatureMin":32.21,"temperatureMinTime":1584109200,"temperatureMax":51.29,"temperatureMaxTime":1584133860,"apparentTemperatureMin":26.36,"apparentTemperatureMinTime":1584110100,"apparentTemperatureMax":51.3,"apparentTemperatureMaxTime":1584134520},{"time":1584165600,"summary":"Partly
-        cloudy throughout the day.","icon":"partly-cloudy-day","sunriseTime":1584191580,"sunsetTime":1584234420,"moonPhase":0.71,"precipIntensity":0.0001,"precipIntensityMax":0.0004,"precipIntensityMaxTime":1584165600,"precipProbability":0.09,"precipType":"rain","temperatureHigh":59.56,"temperatureHighTime":1584223380,"temperatureLow":33.93,"temperatureLowTime":1584272940,"apparentTemperatureHigh":59.06,"apparentTemperatureHighTime":1584223380,"apparentTemperatureLow":32.37,"apparentTemperatureLowTime":1584265800,"dewPoint":24.76,"humidity":0.5,"pressure":1016.6,"windSpeed":4.8,"windGust":8.65,"windGustTime":1584235980,"windBearing":12,"cloudCover":0.39,"uvIndex":6,"uvIndexTime":1584211680,"visibility":10,"ozone":288.8,"temperatureMin":32.66,"temperatureMinTime":1584188280,"temperatureMax":59.56,"temperatureMaxTime":1584223380,"apparentTemperatureMin":31.54,"apparentTemperatureMinTime":1584179400,"apparentTemperatureMax":59.06,"apparentTemperatureMaxTime":1584223380},{"time":1584252000,"summary":"Mostly
-        cloudy throughout the day.","icon":"partly-cloudy-day","sunriseTime":1584277860,"sunsetTime":1584320880,"moonPhase":0.74,"precipIntensity":0.0001,"precipIntensityMax":0.0004,"precipIntensityMaxTime":1584303900,"precipProbability":0.06,"precipType":"rain","temperatureHigh":63.03,"temperatureHighTime":1584310440,"temperatureLow":36.01,"temperatureLowTime":1584361380,"apparentTemperatureHigh":62.53,"apparentTemperatureHighTime":1584310440,"apparentTemperatureLow":34.37,"apparentTemperatureLowTime":1584359400,"dewPoint":24.3,"humidity":0.45,"pressure":1020.3,"windSpeed":3.8,"windGust":7.08,"windGustTime":1584262620,"windBearing":29,"cloudCover":0.57,"uvIndex":5,"uvIndexTime":1584298260,"visibility":10,"ozone":314.7,"temperatureMin":33.93,"temperatureMinTime":1584272940,"temperatureMax":63.03,"temperatureMaxTime":1584310440,"apparentTemperatureMin":32.37,"apparentTemperatureMinTime":1584265800,"apparentTemperatureMax":62.53,"apparentTemperatureMaxTime":1584310440},{"time":1584338400,"summary":"Mostly
-        cloudy throughout the day.","icon":"partly-cloudy-day","sunriseTime":1584364200,"sunsetTime":1584407400,"moonPhase":0.77,"precipIntensity":0.0005,"precipIntensityMax":0.0062,"precipIntensityMaxTime":1584424800,"precipProbability":0.14,"precipType":"rain","temperatureHigh":63.04,"temperatureHighTime":1584395760,"temperatureLow":39.95,"temperatureLowTime":1584448080,"apparentTemperatureHigh":62.54,"apparentTemperatureHighTime":1584395760,"apparentTemperatureLow":39.2,"apparentTemperatureLowTime":1584427560,"dewPoint":25.24,"humidity":0.44,"pressure":1018.5,"windSpeed":4.03,"windGust":12.33,"windGustTime":1584417780,"windBearing":38,"cloudCover":0.66,"uvIndex":5,"uvIndexTime":1584388380,"visibility":10,"ozone":326.4,"temperatureMin":36.01,"temperatureMinTime":1584361380,"temperatureMax":63.04,"temperatureMaxTime":1584395760,"apparentTemperatureMin":34.37,"apparentTemperatureMinTime":1584359400,"apparentTemperatureMax":62.54,"apparentTemperatureMaxTime":1584395760},{"time":1584424800,"summary":"Overcast
-        throughout the day.","icon":"cloudy","sunriseTime":1584450480,"sunsetTime":1584493860,"moonPhase":0.81,"precipIntensity":0.0018,"precipIntensityMax":0.0064,"precipIntensityMaxTime":1584425760,"precipProbability":0.31,"precipType":"rain","temperatureHigh":63.27,"temperatureHighTime":1584481860,"temperatureLow":39.45,"temperatureLowTime":1584533160,"apparentTemperatureHigh":62.77,"apparentTemperatureHighTime":1584481860,"apparentTemperatureLow":37.04,"apparentTemperatureLowTime":1584533340,"dewPoint":30.65,"humidity":0.52,"pressure":1014.9,"windSpeed":5.95,"windGust":24.98,"windGustTime":1584505200,"windBearing":144,"cloudCover":0.96,"uvIndex":4,"uvIndexTime":1584471480,"visibility":10,"ozone":320.9,"temperatureMin":39.95,"temperatureMinTime":1584448080,"temperatureMax":63.27,"temperatureMaxTime":1584481860,"apparentTemperatureMin":39.2,"apparentTemperatureMinTime":1584427560,"apparentTemperatureMax":62.77,"apparentTemperatureMaxTime":1584481860},{"time":1584511200,"summary":"Clear
-        throughout the day.","icon":"clear-day","sunriseTime":1584536820,"sunsetTime":1584580320,"moonPhase":0.84,"precipIntensity":0.002,"precipIntensityMax":0.0245,"precipIntensityMaxTime":1584597600,"precipProbability":0.22,"precipType":"rain","temperatureHigh":70.82,"temperatureHighTime":1584565380,"temperatureLow":40.08,"temperatureLowTime":1584626400,"apparentTemperatureHigh":70.32,"apparentTemperatureHighTime":1584565380,"apparentTemperatureLow":37.21,"apparentTemperatureLowTime":1584624180,"dewPoint":18.19,"humidity":0.34,"pressure":1006.7,"windSpeed":5.85,"windGust":23.84,"windGustTime":1584591360,"windBearing":209,"cloudCover":0.12,"uvIndex":6,"uvIndexTime":1584558180,"visibility":10,"ozone":339.3,"temperatureMin":39.45,"temperatureMinTime":1584533160,"temperatureMax":70.82,"temperatureMaxTime":1584565380,"apparentTemperatureMin":37.04,"apparentTemperatureMinTime":1584533340,"apparentTemperatureMax":70.32,"apparentTemperatureMaxTime":1584565380},{"time":1584597600,"summary":"Partly
-        cloudy throughout the day.","icon":"rain","sunriseTime":1584623100,"sunsetTime":1584666780,"moonPhase":0.87,"precipIntensity":0.0078,"precipIntensityMax":0.0246,"precipIntensityMaxTime":1584597840,"precipProbability":0.49,"precipType":"rain","temperatureHigh":54.79,"temperatureHighTime":1584651480,"temperatureLow":31.52,"temperatureLowTime":1584704520,"apparentTemperatureHigh":54.29,"apparentTemperatureHighTime":1584651480,"apparentTemperatureLow":26.41,"apparentTemperatureLowTime":1584703440,"dewPoint":21.28,"humidity":0.42,"pressure":1005.6,"windSpeed":7.67,"windGust":31.51,"windGustTime":1584684000,"windBearing":348,"cloudCover":0.57,"uvIndex":5,"uvIndexTime":1584642060,"visibility":10,"ozone":349.7,"temperatureMin":34.53,"temperatureMinTime":1584684000,"temperatureMax":54.79,"temperatureMaxTime":1584651480,"apparentTemperatureMin":27.92,"apparentTemperatureMinTime":1584684000,"apparentTemperatureMax":54.29,"apparentTemperatureMaxTime":1584651480}]},"flags":{"sources":["nwspa","cmc","gfs","hrrr","icon","isd","madis","nam","sref"],"nearest-station":1.334,"units":"us"},"offset":-6}
+      string: '{"latitude":39.7392358,"longitude":-104.990251,"timezone":"America/Denver","daily":{"summary":"Rain
+        tomorrow through Thursday.","icon":"rain","data":[{"time":1590732000,"summary":"Clear
+        throughout the day.","icon":"clear-day","sunriseTime":1590752160,"sunsetTime":1590805320,"moonPhase":0.25,"precipIntensity":0.0006,"precipIntensityMax":0.0024,"precipIntensityMaxTime":1590796200,"precipProbability":0.08,"precipType":"rain","temperatureHigh":89.99,"temperatureHighTime":1590788460,"temperatureLow":61.16,"temperatureLowTime":1590837300,"apparentTemperatureHigh":89.49,"apparentTemperatureHighTime":1590788460,"apparentTemperatureLow":61.65,"apparentTemperatureLowTime":1590837300,"dewPoint":50.67,"humidity":0.49,"pressure":1014.2,"windSpeed":4.39,"windGust":17.47,"windGustTime":1590801420,"windBearing":172,"cloudCover":0.11,"uvIndex":11,"uvIndexTime":1590778500,"visibility":5.465,"ozone":299.5,"temperatureMin":58.35,"temperatureMinTime":1590752580,"temperatureMax":89.99,"temperatureMaxTime":1590788460,"apparentTemperatureMin":58.84,"apparentTemperatureMinTime":1590752580,"apparentTemperatureMax":89.49,"apparentTemperatureMaxTime":1590788460},{"time":1590818400,"summary":"Possible
+        light rain in the evening.","icon":"rain","sunriseTime":1590838560,"sunsetTime":1590891720,"moonPhase":0.29,"precipIntensity":0.009,"precipIntensityMax":0.0306,"precipIntensityMaxTime":1590894660,"precipProbability":0.61,"precipType":"rain","temperatureHigh":85.02,"temperatureHighTime":1590867840,"temperatureLow":59.31,"temperatureLowTime":1590923880,"apparentTemperatureHigh":84.52,"apparentTemperatureHighTime":1590867840,"apparentTemperatureLow":59.8,"apparentTemperatureLowTime":1590923880,"dewPoint":51.5,"humidity":0.49,"pressure":1013.2,"windSpeed":6.09,"windGust":22.53,"windGustTime":1590892800,"windBearing":190,"cloudCover":0.5,"uvIndex":10,"uvIndexTime":1590862320,"visibility":9.987,"ozone":300.2,"temperatureMin":61.16,"temperatureMinTime":1590837300,"temperatureMax":85.02,"temperatureMaxTime":1590867840,"apparentTemperatureMin":61.65,"apparentTemperatureMinTime":1590837300,"apparentTemperatureMax":84.52,"apparentTemperatureMaxTime":1590867840},{"time":1590904800,"summary":"Mostly
+        cloudy throughout the day.","icon":"rain","sunriseTime":1590924960,"sunsetTime":1590978180,"moonPhase":0.32,"precipIntensity":0.005,"precipIntensityMax":0.0239,"precipIntensityMaxTime":1590970380,"precipProbability":0.41,"precipType":"rain","temperatureHigh":87.73,"temperatureHighTime":1590957900,"temperatureLow":61.92,"temperatureLowTime":1591010340,"apparentTemperatureHigh":87.23,"apparentTemperatureHighTime":1590957900,"apparentTemperatureLow":62.41,"apparentTemperatureLowTime":1591010340,"dewPoint":52.94,"humidity":0.55,"pressure":1012.6,"windSpeed":6.17,"windGust":28.54,"windGustTime":1590972600,"windBearing":174,"cloudCover":0.74,"uvIndex":8,"uvIndexTime":1590950040,"visibility":10,"ozone":297.7,"temperatureMin":59.31,"temperatureMinTime":1590923880,"temperatureMax":87.73,"temperatureMaxTime":1590957900,"apparentTemperatureMin":59.8,"apparentTemperatureMinTime":1590923880,"apparentTemperatureMax":87.23,"apparentTemperatureMaxTime":1590957900},{"time":1590991200,"summary":"Rain
+        in the evening.","icon":"rain","sunriseTime":1591011300,"sunsetTime":1591064640,"moonPhase":0.36,"precipIntensity":0.0109,"precipIntensityMax":0.0715,"precipIntensityMaxTime":1591057920,"precipProbability":0.44,"precipType":"rain","temperatureHigh":89.03,"temperatureHighTime":1591042740,"temperatureLow":61.09,"temperatureLowTime":1591096860,"apparentTemperatureHigh":88.53,"apparentTemperatureHighTime":1591042740,"apparentTemperatureLow":61.58,"apparentTemperatureLowTime":1591096860,"dewPoint":49.24,"humidity":0.44,"pressure":1012.7,"windSpeed":6.59,"windGust":26.53,"windGustTime":1591065900,"windBearing":189,"cloudCover":0.68,"uvIndex":9,"uvIndexTime":1591037220,"visibility":9.397,"ozone":299.1,"temperatureMin":61.92,"temperatureMinTime":1591010340,"temperatureMax":89.03,"temperatureMaxTime":1591042740,"apparentTemperatureMin":62.41,"apparentTemperatureMinTime":1591010340,"apparentTemperatureMax":88.53,"apparentTemperatureMaxTime":1591042740},{"time":1591077600,"summary":"Mostly
+        cloudy throughout the day.","icon":"partly-cloudy-day","sunriseTime":1591097700,"sunsetTime":1591151040,"moonPhase":0.4,"precipIntensity":0.0021,"precipIntensityMax":0.0149,"precipIntensityMaxTime":1591153140,"precipProbability":0.21,"precipType":"rain","temperatureHigh":83.15,"temperatureHighTime":1591130340,"temperatureLow":59.72,"temperatureLowTime":1591185360,"apparentTemperatureHigh":82.65,"apparentTemperatureHighTime":1591130340,"apparentTemperatureLow":60.21,"apparentTemperatureLowTime":1591185360,"dewPoint":48.67,"humidity":0.46,"pressure":1012.4,"windSpeed":5.9,"windGust":18.79,"windGustTime":1591144860,"windBearing":316,"cloudCover":0.74,"uvIndex":9,"uvIndexTime":1591128780,"visibility":10,"ozone":292.7,"temperatureMin":61.09,"temperatureMinTime":1591096860,"temperatureMax":83.15,"temperatureMaxTime":1591130340,"apparentTemperatureMin":61.58,"apparentTemperatureMinTime":1591096860,"apparentTemperatureMax":82.65,"apparentTemperatureMaxTime":1591130340},{"time":1591164000,"summary":"Rain
+        in the evening.","icon":"rain","sunriseTime":1591184040,"sunsetTime":1591237500,"moonPhase":0.44,"precipIntensity":0.0124,"precipIntensityMax":0.0894,"precipIntensityMaxTime":1591239480,"precipProbability":0.49,"precipType":"rain","temperatureHigh":79.3,"temperatureHighTime":1591218480,"temperatureLow":58.07,"temperatureLowTime":1591270380,"apparentTemperatureHigh":78.8,"apparentTemperatureHighTime":1591218480,"apparentTemperatureLow":58.56,"apparentTemperatureLowTime":1591270380,"dewPoint":49.75,"humidity":0.51,"pressure":1015.4,"windSpeed":5.98,"windGust":23.68,"windGustTime":1591250340,"windBearing":121,"cloudCover":0.49,"uvIndex":12,"uvIndexTime":1591210740,"visibility":9.664,"ozone":286,"temperatureMin":59.72,"temperatureMinTime":1591185360,"temperatureMax":79.3,"temperatureMaxTime":1591218480,"apparentTemperatureMin":60.21,"apparentTemperatureMinTime":1591185360,"apparentTemperatureMax":78.8,"apparentTemperatureMaxTime":1591218480},{"time":1591250400,"summary":"Rain
+        in the evening.","icon":"rain","sunriseTime":1591270440,"sunsetTime":1591323960,"moonPhase":0.47,"precipIntensity":0.016,"precipIntensityMax":0.1044,"precipIntensityMaxTime":1591316100,"precipProbability":0.6,"precipType":"rain","temperatureHigh":86.39,"temperatureHighTime":1591300380,"temperatureLow":58.59,"temperatureLowTime":1591354680,"apparentTemperatureHigh":85.89,"apparentTemperatureHighTime":1591300380,"apparentTemperatureLow":59.08,"apparentTemperatureLowTime":1591354680,"dewPoint":49.79,"humidity":0.5,"pressure":1010.3,"windSpeed":6.46,"windGust":23.68,"windGustTime":1591250400,"windBearing":214,"cloudCover":0.63,"uvIndex":9,"uvIndexTime":1591296840,"visibility":9.232,"ozone":287.7,"temperatureMin":58.07,"temperatureMinTime":1591270380,"temperatureMax":86.39,"temperatureMaxTime":1591300380,"apparentTemperatureMin":58.56,"apparentTemperatureMinTime":1591270380,"apparentTemperatureMax":85.89,"apparentTemperatureMaxTime":1591300380},{"time":1591336800,"summary":"Partly
+        cloudy throughout the day.","icon":"partly-cloudy-day","sunriseTime":1591356840,"sunsetTime":1591410360,"moonPhase":0.51,"precipIntensity":0.0001,"precipIntensityMax":0.0003,"precipIntensityMaxTime":1591356780,"precipProbability":0.05,"precipType":"rain","temperatureHigh":86.57,"temperatureHighTime":1591399020,"temperatureLow":66.34,"temperatureLowTime":1591441860,"apparentTemperatureHigh":86.07,"apparentTemperatureHighTime":1591399020,"apparentTemperatureLow":66.83,"apparentTemperatureLowTime":1591441860,"dewPoint":42.9,"humidity":0.37,"pressure":1005.9,"windSpeed":7.38,"windGust":27.1,"windGustTime":1591386720,"windBearing":182,"cloudCover":0.43,"uvIndex":9,"uvIndexTime":1591386300,"visibility":10,"ozone":300.2,"temperatureMin":58.59,"temperatureMinTime":1591354680,"temperatureMax":86.57,"temperatureMaxTime":1591399020,"apparentTemperatureMin":59.08,"apparentTemperatureMinTime":1591354680,"apparentTemperatureMax":86.07,"apparentTemperatureMaxTime":1591399020}]},"alerts":[{"title":"Air
+        Quality Alert","regions":["Adams","Arapahoe","Boulder","Broomfield","Denver","Douglas","Jefferson","Larimer","Weld"],"severity":"advisory","time":1590703920,"expires":1590789600,"description":"...OZONE
+        ACTION DAY ALERT FROM 400 PM THURSDAY UNTIL 400 PM FRIDAY... The Colorado
+        Department of Public Health and Environment has issued the following... WHAT...Ozone
+        Action Day Alert. WHERE...Douglas, Jefferson, Denver, western Arapahoe, western
+        Adams, Broomfield, Boulder, Larimer, and Weld Counties WHEN...400 PM Thursday
+        May 28 to 400 PM Friday May 29 IMPACTS...Ozone Action Day Alert is now in
+        effect for the seven- county Denver- Boulder metropolitan area. Requests to
+        limit driving are now in effect until at least 4 PM Friday, May 29, 2020.
+        Hot and sunny weather, along with light winds, will lead to concentrations
+        of ozone that are Unhealthy for Sensitive Groups on Friday. The highest concentrations
+        of ozone are most likely for locations in the western portions of the Denver
+        Metro area, and northward along the Front Range and lower foothills through
+        Boulder, Longmont, and western Fort Collins. For areas included in this advisory
+        that are not expected to exceed the Unhealthy for Sensitive Groups (USG) air
+        quality designation, we request that activities, such as driving, be reduced
+        to lessen the impacts on neighboring air quality. Additional air pollution
+        in this region may directly diminish air quality or contribute to precursors
+        which may also adversely affect air quality. For Colorado air quality conditions,
+        forecasts and advisories, visit: https://www.colorado.gov/airquality/colorado_summary.aspx
+        HEALTH INFORMATION...Increasing likelihood of respiratory symptoms and breathing
+        discomfort in active children and adults and people with lung disease, such
+        as asthma. Active children and adults, and people with lung disease, such
+        as asthma, should reduce prolonged or heavy outdoor exertion.\n","uri":"https://alerts.weather.gov/cap/wwacapget.php?x=CO125F4D4F1410.AirQualityAlert.125F4D5E51A0CO.BOUAQABOU.1cf776118c3db3569458730525db3fe1"}],"flags":{"sources":["nwspa","cmc","gfs","hrrr","icon","isd","madis","nam","sref"],"nearest-station":1.307,"units":"us"},"offset":-6}
 
 '
-    http_version: null
   recorded_at: Tue, 03 Mar 2020 19:00:00 GMT
 - request:
     method: get
@@ -299,7 +381,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Thu, 12 Mar 2020 22:40:25 GMT
+      - Fri, 29 May 2020 21:22:13 GMT
       Pragma:
       - no-cache
       Expires:
@@ -315,11 +397,11 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Server-Timing:
-      - gfet4t7; dur=15
+      - gfet4t7; dur=14
       Alt-Svc:
-      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
-        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
-        ma=2592000
+      - h3-27=":443"; ma=2592000,h3-25=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q050=":443";
+        ma=2592000,h3-Q049=":443"; ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443";
+        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
       Transfer-Encoding:
       - chunked
     body:
@@ -332,7 +414,6 @@ http_interactions:
            "timeZoneId" : "America/Denver",
            "timeZoneName" : "Mountain Standard Time"
         }
-    http_version: null
   recorded_at: Tue, 03 Mar 2020 19:00:00 GMT
 - request:
     method: get
@@ -355,119 +436,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Thu, 12 Mar 2020 22:40:25 GMT
-      Pragma:
-      - no-cache
-      Expires:
-      - Fri, 01 Jan 1990 00:00:00 GMT
-      Cache-Control:
-      - no-cache, must-revalidate
-      Access-Control-Allow-Origin:
-      - "*"
-      Server:
-      - mafe
-      X-Xss-Protection:
-      - '0'
-      X-Frame-Options:
-      - SAMEORIGIN
-      Server-Timing:
-      - gfet4t7; dur=8
-      Alt-Svc:
-      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
-        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
-        ma=2592000
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: ASCII-8BIT
-      string: |
-        {
-           "dstOffset" : 0,
-           "rawOffset" : -25200,
-           "status" : "OK",
-           "timeZoneId" : "America/Denver",
-           "timeZoneName" : "Mountain Standard Time"
-        }
-    http_version: null
-  recorded_at: Tue, 03 Mar 2020 19:00:00 GMT
-- request:
-    method: get
-    uri: https://maps.googleapis.com/maps/api/timezone/json?key=<GEOCODE_API>&location=39.7392358,-104.990251&timestamp=1583262000
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json; charset=UTF-8
-      Date:
-      - Thu, 12 Mar 2020 22:40:25 GMT
-      Pragma:
-      - no-cache
-      Expires:
-      - Fri, 01 Jan 1990 00:00:00 GMT
-      Cache-Control:
-      - no-cache, must-revalidate
-      Access-Control-Allow-Origin:
-      - "*"
-      Server:
-      - mafe
-      X-Xss-Protection:
-      - '0'
-      X-Frame-Options:
-      - SAMEORIGIN
-      Server-Timing:
-      - gfet4t7; dur=6
-      Alt-Svc:
-      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
-        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
-        ma=2592000
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: ASCII-8BIT
-      string: |
-        {
-           "dstOffset" : 0,
-           "rawOffset" : -25200,
-           "status" : "OK",
-           "timeZoneId" : "America/Denver",
-           "timeZoneName" : "Mountain Standard Time"
-        }
-    http_version: null
-  recorded_at: Tue, 03 Mar 2020 19:00:00 GMT
-- request:
-    method: get
-    uri: https://maps.googleapis.com/maps/api/timezone/json?key=<GEOCODE_API>&location=39.7392358,-104.990251&timestamp=1583262000
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json; charset=UTF-8
-      Date:
-      - Thu, 12 Mar 2020 22:40:25 GMT
+      - Fri, 29 May 2020 21:22:13 GMT
       Pragma:
       - no-cache
       Expires:
@@ -485,9 +454,9 @@ http_interactions:
       Server-Timing:
       - gfet4t7; dur=8
       Alt-Svc:
-      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
-        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
-        ma=2592000
+      - h3-27=":443"; ma=2592000,h3-25=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q050=":443";
+        ma=2592000,h3-Q049=":443"; ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443";
+        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
       Transfer-Encoding:
       - chunked
     body:
@@ -500,7 +469,6 @@ http_interactions:
            "timeZoneId" : "America/Denver",
            "timeZoneName" : "Mountain Standard Time"
         }
-    http_version: null
   recorded_at: Tue, 03 Mar 2020 19:00:00 GMT
 - request:
     method: get
@@ -523,7 +491,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Thu, 12 Mar 2020 22:40:25 GMT
+      - Fri, 29 May 2020 21:22:13 GMT
       Pragma:
       - no-cache
       Expires:
@@ -539,11 +507,11 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Server-Timing:
-      - gfet4t7; dur=9
+      - gfet4t7; dur=11
       Alt-Svc:
-      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
-        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
-        ma=2592000
+      - h3-27=":443"; ma=2592000,h3-25=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q050=":443";
+        ma=2592000,h3-Q049=":443"; ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443";
+        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
       Transfer-Encoding:
       - chunked
     body:
@@ -556,7 +524,6 @@ http_interactions:
            "timeZoneId" : "America/Denver",
            "timeZoneName" : "Mountain Standard Time"
         }
-    http_version: null
   recorded_at: Tue, 03 Mar 2020 19:00:00 GMT
 - request:
     method: get
@@ -579,7 +546,62 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Thu, 12 Mar 2020 22:40:25 GMT
+      - Fri, 29 May 2020 21:22:13 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - mafe
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=8
+      Alt-Svc:
+      - h3-27=":443"; ma=2592000,h3-25=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q050=":443";
+        ma=2592000,h3-Q049=":443"; ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443";
+        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "dstOffset" : 0,
+           "rawOffset" : -25200,
+           "status" : "OK",
+           "timeZoneId" : "America/Denver",
+           "timeZoneName" : "Mountain Standard Time"
+        }
+  recorded_at: Tue, 03 Mar 2020 19:00:00 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/timezone/json?key=<GEOCODE_API>&location=39.7392358,-104.990251&timestamp=1583262000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Fri, 29 May 2020 21:22:13 GMT
       Pragma:
       - no-cache
       Expires:
@@ -597,9 +619,9 @@ http_interactions:
       Server-Timing:
       - gfet4t7; dur=7
       Alt-Svc:
-      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
-        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
-        ma=2592000
+      - h3-27=":443"; ma=2592000,h3-25=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q050=":443";
+        ma=2592000,h3-Q049=":443"; ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443";
+        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
       Transfer-Encoding:
       - chunked
     body:
@@ -612,7 +634,6 @@ http_interactions:
            "timeZoneId" : "America/Denver",
            "timeZoneName" : "Mountain Standard Time"
         }
-    http_version: null
   recorded_at: Tue, 03 Mar 2020 19:00:00 GMT
 - request:
     method: get
@@ -635,7 +656,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Thu, 12 Mar 2020 22:40:26 GMT
+      - Fri, 29 May 2020 21:22:13 GMT
       Pragma:
       - no-cache
       Expires:
@@ -651,11 +672,11 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Server-Timing:
-      - gfet4t7; dur=8
+      - gfet4t7; dur=7
       Alt-Svc:
-      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
-        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
-        ma=2592000
+      - h3-27=":443"; ma=2592000,h3-25=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q050=":443";
+        ma=2592000,h3-Q049=":443"; ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443";
+        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
       Transfer-Encoding:
       - chunked
     body:
@@ -668,7 +689,6 @@ http_interactions:
            "timeZoneId" : "America/Denver",
            "timeZoneName" : "Mountain Standard Time"
         }
-    http_version: null
   recorded_at: Tue, 03 Mar 2020 19:00:00 GMT
 - request:
     method: get
@@ -691,7 +711,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Thu, 12 Mar 2020 22:40:26 GMT
+      - Fri, 29 May 2020 21:22:13 GMT
       Pragma:
       - no-cache
       Expires:
@@ -707,11 +727,11 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Server-Timing:
-      - gfet4t7; dur=8
+      - gfet4t7; dur=14
       Alt-Svc:
-      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
-        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
-        ma=2592000
+      - h3-27=":443"; ma=2592000,h3-25=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q050=":443";
+        ma=2592000,h3-Q049=":443"; ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443";
+        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
       Transfer-Encoding:
       - chunked
     body:
@@ -724,6 +744,60 @@ http_interactions:
            "timeZoneId" : "America/Denver",
            "timeZoneName" : "Mountain Standard Time"
         }
-    http_version: null
   recorded_at: Tue, 03 Mar 2020 19:00:00 GMT
-recorded_with: VCR 5.1.0
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/timezone/json?key=<GEOCODE_API>&location=39.7392358,-104.990251&timestamp=1583262000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Fri, 29 May 2020 21:22:13 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - mafe
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=14
+      Alt-Svc:
+      - h3-27=":443"; ma=2592000,h3-25=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q050=":443";
+        ma=2592000,h3-Q049=":443"; ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443";
+        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "dstOffset" : 0,
+           "rawOffset" : -25200,
+           "status" : "OK",
+           "timeZoneId" : "America/Denver",
+           "timeZoneName" : "Mountain Standard Time"
+        }
+  recorded_at: Tue, 03 Mar 2020 19:00:00 GMT
+recorded_with: VCR 6.0.0
