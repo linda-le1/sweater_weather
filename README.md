@@ -3,12 +3,12 @@
 # Introduction
 This is a solo project for Mod 3 students. Students were required to utilize multiple APIs (some of which required an authentication token), and expose an API to aggregate data and for CRUD functionality. The complete set of project requirements and evaluation criteria can be found at https://backend.turing.io/module3/projects/sweater_weather/.
 
-## Production 
-This API has been hosted on Heroku at https://dashboard.heroku.com/apps/fierce-meadow-03802. 
+## Production
+This API has been hosted on Heroku at https://dashboard.heroku.com/apps/fierce-meadow-03802.
 
 ## Ruby/Rails Versions
 - Rails 6.0.2.1
-- Ruby 2.5.1p57 
+- Ruby 2.5.1p57
 
 ## Setup Instructions
 
@@ -61,13 +61,13 @@ Then open a browser and enter "localhost:3000".
 `https://fierce-meadow-03802.herokuapp.com/api/v1/backgrounds?location=denver,co`
 
 `POST /api/v1/users`
-- This query requires an email, password, and password confirmation as params. This will return an API key. 
+- This query requires an email, password, and password confirmation as params. This will return an API key.
 
 `POST /api/v1/sessions`
-- This query requires an email, password as params. Authorized login will return an API key. 
+- This query requires an email, password as params. Authorized login will return an API key.
 
-`POST /api/v1/road_trip`
-- This query requires an origin location, destination location, and api key as params. 
+`POST /api/v1/roadtrip`
+- This query requires an origin location, destination location, and api key as params.
 
 
 
