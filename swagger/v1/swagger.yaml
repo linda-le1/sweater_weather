@@ -1,0 +1,96 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  "/api/v1/backgrounds":
+    get:
+      summary: Returns a background image url
+      parameters:
+      - name: location
+        in: query
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  url:
+                    type: string
+  "/api/v1/forecast":
+    get:
+      summary: returns weather forecast information
+      parameters:
+      - name: location
+        in: query
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  origin:
+                    type: string
+                  destination:
+                    type: string
+                  arrival_forecast:
+                    type: string
+  "/api/v1/roadtrip":
+    post:
+      summary: returns road trip information including travel time and arrival weather
+        forecast
+      parameters:
+      - name: origin
+        in: query
+        required: true
+        schema:
+          type: string
+      - name: destination
+        in: query
+        required: true
+        schema:
+          type: string
+      - name: api_key
+        in: query
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  origin:
+                    type: string
+                  destination:
+                    type: string
+                  arrival_forecast:
+                    type: string
+        '400':
+          description: invalid request
+          content: {}
+servers:
+- url: https://{defaultHost}
+  variables:
+    defaultHost:
+      default: https://fierce-meadow-03802.herokuapp.com/

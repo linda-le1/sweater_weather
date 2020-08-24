@@ -27,7 +27,7 @@ RSpec.configure do |config|
           url: 'https://{defaultHost}',
           variables: {
             defaultHost: {
-              default: 'https://fierce-meadow-03802.herokuapp.com/'
+              default: 'localhost3000'
             }
           }
         }

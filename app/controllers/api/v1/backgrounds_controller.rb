@@ -5,7 +5,7 @@ class Api::V1::BackgroundsController < ApplicationController
         results = service.get_json
         if results['results'].empty?
                 render json: {
-                error: 'Something went wrong. Please try again.'
+                error: 'Something went wrong. Please try again!!!'
                             },
                 status: :bad_request
         else
